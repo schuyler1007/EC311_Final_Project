@@ -5,7 +5,7 @@ parameter c_NUM_BITS = 8; // up to 32 bits
    
   wire [c_NUM_BITS-1:0] w_LFSR_Data;
    
-  LFSR #(.NUM_BITS(c_NUM_BITS)) LFSR_inst
+  random_num #(.NUM_BITS(c_NUM_BITS)) rn
          (.clk_i(r_Clk),
           .en_i(1'b1),
           .seed_i(1'b0),
