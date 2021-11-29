@@ -1,4 +1,4 @@
-module LFSR #(parameter NUM_BITS)
+module random_num #(parameter NUM_BITS)
   (
    input clk_i,
    input en_i,
