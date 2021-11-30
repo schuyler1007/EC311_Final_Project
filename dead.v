@@ -21,11 +21,19 @@
 
 // 1 means player is dead, 0 means player is not dead;
 // dead if top height<10 or >420 
-module dead(height, is_dead);
+module dead(reset, in_game, height, is_dead);
+    input       reset, in_game;     // in game is whtehr the player is activated for the game
     input [8:0] height;
     output reg  is_dead;
     
+    initial begin
+        is_dead=1'b0;
+    end
+    
     always @ (*) begin
-        is_dead = (height<10 | height>420)? 1'b1 : 1'b0;
+        if (reset==0)
+            is_dead=1'b0;
+        else if(in_game==1)
+            is_dead = (height<10 | height>420)? 1'b1 : 1'b0;
     end
 endmodule
