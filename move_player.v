@@ -29,13 +29,9 @@ module move_player(reset, clk, grav_dir, is_dead, lines,  height);
     output reg [8:0] height;        // height of top left corner of player
     reg        [8:0] next;          // next height
     
-    initial begin
-    height = 240;                   //starts player at height of middle line
-    end
-    
     always @ (posedge clk) begin
         if (reset==0)
-            height = 240;
+            height = 240;            //starts player at height of middle line
         else if (is_dead==0)
             height <=next;
     end
