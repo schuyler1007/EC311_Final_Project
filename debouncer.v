@@ -27,17 +27,12 @@ module debouncer(clk_i, reset_i, buttonin_i, buttonout_o);
     reg               o_yet;
     reg   [15:0]       MAX,counter;
     
-    initial begin
-        o_yet   = 0;
-        counter = 16'b0000000000000000;
-        MAX     = 50000;
-        buttonout_o=0;
-    end
-    
     always @ (posedge clk_i or negedge reset_i) begin
         if (reset_i==0) begin
             o_yet       = 0;
             counter = 16'b0000000000000000;
+            MAX     = 50000;
+            buttonout_o=0;
          end 
          
          else begin
