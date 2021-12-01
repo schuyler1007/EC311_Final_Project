@@ -26,10 +26,6 @@ module dead(reset, in_game, height, is_dead);
     input [8:0] height;
     output reg  is_dead;
     
-    initial begin
-        is_dead=1'b0;
-    end
-    
     always @ (*) begin
         if (reset==0)
             is_dead=1'b0;
