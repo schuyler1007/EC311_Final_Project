@@ -28,10 +28,6 @@ module gavity_direction(clk, reset, is_dead, switch, lines, height, dir);
     output reg  dir;
     reg         next;
     
-    initial begin
-        dir=0;
-    end
-    
     always @ (posedge clk) begin
         if (reset==0)
             dir <= 0;
