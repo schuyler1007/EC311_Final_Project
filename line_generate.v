@@ -1,21 +1,22 @@
-module line_generate(clk_i, clk_lfsr, en_i, line_o, rand_num);
-    input clk_i, en_i, clk_lfsr;
+module line_generate(reset_i, clk_i, en_i, line_o);
+    input reset_i, clk_i, en_i;
     output [639:0] line_o;
-    output [7:0] rand_num;
+    wire [7:0] rand_num;
     reg [639:0] cs, ns;
     reg [6:0] count;
     reg new_bit;
-
-    initial begin
-        cs = 0;
-        ns = 0;
-        count = 0;
-        new_bit = 1;
-    end
     
-    LFSR rn(.clk_i(clk_lfsr), .en_i(en_i), .out_o(rand_num));
+    LFSR rn(.clk_i(clk_i), .en_i(en_i), .out_o(rand_num));
 
-    always@(posedge clk_i) begin
+    always@(posedge clk_i or negedge reset_i) begin
+        if (reset_i==0) begin
+            cs = 0;
+            cs = cs - 1;
+            ns = 0;
+            ns = ns - 1;
+            count = 0;
+            new_bit = 1;
+        end
         cs <= ns;
         count = count + 1;
     end // always
