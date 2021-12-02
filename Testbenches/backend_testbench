@@ -1,0 +1,73 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 12/02/2021 03:33:03 PM
+// Design Name: 
+// Module Name: backend_testbench
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module backend_testbench();
+    reg clk, reset, enter_game, switch, start_game;
+    wire in_game, enable_board, is_dead, dir;
+    wire p1_i, p2_i, p3_i, p4_i, p1_o, p2_o, p3_o, p4_o;
+    reg [2:0] lines;
+    wire [8:0] height;
+    wire [639:0] ground_top, ground_middle, ground_bottom;
+    
+    start_game          lock_player (reset, start_game, enter_game, p2_i, p3_i, p4_i, in_game, p2_o, p3_o, p4_o, enable_board);
+    dead                player_dead (reset, in_game, height, is_dead);
+    gavity_direction    gravity     (clk, reset, is_dead, switch, lines, height, dir);
+    move_player         move        (reset, clk, dir, is_dead, lines,  height);
+    
+    line_generate       top         (reset, clk, enable_board, ground_top);
+    line_generate       middle      (reset, clk, enable_board, ground_middle);
+    line_generate       bottom      (reset, clk, enable_board, ground_bottom);
+    
+    initial begin
+        clk=0;
+        enter_game=0;
+        start_game=0;
+        switch=0;
+        reset=0; 
+        #1 reset=1;
+    end
+    
+    always @(*) begin
+        lines = {ground_bottom[20], ground_middle[20], ground_top[20]};
+    end
+    
+    always #1 begin
+        clk = ~ clk;
+    end
+    
+    always #2 begin
+        enter_game = ~ enter_game;
+    end
+    
+    always #8 begin
+        start_game = ~ start_game;
+    end
+    
+    always #64 begin
+        switch = ~ switch;
+    end
+    
+    always #4096 begin
+        reset=0; 
+        #1reset=1;
+    end
+endmodule
