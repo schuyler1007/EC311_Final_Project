@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Fri Nov 12 12:05:43 2021
-# Process ID: 6792
+# Start of session at: Mon Nov 29 10:53:29 2021
+# Process ID: 10164
 # Current directory: X:/ec311/project/vga_testing/vga_testing.runs/synth_1
 # Command line: vivado.exe -log top_square.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_square.tcl
 # Log file: X:/ec311/project/vga_testing/vga_testing.runs/synth_1/top_square.vds
