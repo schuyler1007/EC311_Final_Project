@@ -6,7 +6,6 @@ odule line_generate_tb();
     
     initial begin
         clk_i = 0;
-        #10 reset_i = 0;
         reset_i = 1;
     end
     
