@@ -1,76 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1638201258">
-  <File Type="BITSTR-BMM" Name="top_square_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="top_square_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="top_square_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR" Name="top_square_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="top_square.tcl"/>
-  <File Type="OPT-TIMING" Name="top_square_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="top_square_opt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="top_square_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="top_square_reports.tcl"/>
-  <File Type="OPT-DRC" Name="top_square_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="top_square.hwdef"/>
-  <File Type="PWROPT-DCP" Name="top_square_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="top_square_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="top_square_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="top_square_placed.dcp"/>
-  <File Type="PLACE-IO" Name="top_square_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="top_square_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="top_square_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="top_square_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="top_square_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="top_square_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="top_square_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BGN" Name="top_square.bgn"/>
-  <File Type="PLACE-TIMING" Name="top_square_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="top_square_postplace_pwropt.dcp"/>
-  <File Type="BG-BIN" Name="top_square.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="top_square_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="top_square_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="top_square_drc_physopted.rpt"/>
-  <File Type="BITSTR-MSK" Name="top_square.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="top_square_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="top_square_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="top_square_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="top_square_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="top_square_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="top_square_drc_routed.pb"/>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1638561398">
+  <File Type="BITSTR-BMM" Name="draw_game_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="draw_game_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="draw_game_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="draw_game_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="draw_game.tcl"/>
+  <File Type="OPT-TIMING" Name="draw_game_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="draw_game_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="draw_game_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="draw_game_reports.tcl"/>
+  <File Type="OPT-DRC" Name="draw_game_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="draw_game.hwdef"/>
+  <File Type="PWROPT-DCP" Name="draw_game_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="draw_game_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="draw_game_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="draw_game_placed.dcp"/>
+  <File Type="PLACE-IO" Name="draw_game_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="draw_game_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="draw_game_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="draw_game_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="draw_game_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="draw_game_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="draw_game_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="draw_game.bgn"/>
+  <File Type="PLACE-TIMING" Name="draw_game_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="draw_game_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="draw_game.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="draw_game_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="draw_game_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="draw_game_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="draw_game.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="draw_game_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="draw_game_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="draw_game_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="draw_game_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="draw_game_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="draw_game_drc_routed.pb"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="top_square.ltx"/>
-  <File Type="ROUTE-DRC-RPX" Name="top_square_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="top_square.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="top_square_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="top_square_methodology_drc_routed.rpx"/>
-  <File Type="BITSTR-SYSDEF" Name="top_square.sysdef"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="top_square_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="top_square_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="top_square_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="top_square_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="top_square_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="top_square_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="top_square_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="top_square_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="top_square_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="top_square_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="top_square_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="top_square_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="top_square_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="top_square_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="top_square_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="top_square_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="top_square_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="top_square_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="top_square_bus_skew_postroute_physopted.pb"/>
-  <File Type="BG-BIT" Name="top_square.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="top_square_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-RBT" Name="top_square.rbt"/>
-  <File Type="BITSTR-NKY" Name="top_square.nky"/>
-  <File Type="BG-DRC" Name="top_square.drc"/>
-  <File Type="RDI-RDI" Name="top_square.vdi"/>
+  <File Type="BITSTR-LTX" Name="draw_game.ltx"/>
+  <File Type="ROUTE-DRC-RPX" Name="draw_game_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="draw_game.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="draw_game_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="draw_game_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-SYSDEF" Name="draw_game.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="draw_game_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="draw_game_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="draw_game_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="draw_game_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="draw_game_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="draw_game_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="draw_game_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="draw_game_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="draw_game_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="draw_game_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="draw_game_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="draw_game_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="draw_game_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="draw_game_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="draw_game_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="draw_game_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="draw_game_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="draw_game_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="draw_game_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="draw_game.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="draw_game_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="draw_game.rbt"/>
+  <File Type="BITSTR-NKY" Name="draw_game.nky"/>
+  <File Type="BG-DRC" Name="draw_game.drc"/>
+  <File Type="RDI-RDI" Name="draw_game.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/LFSR.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clock_divider.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/draw_line.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/line_generate.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/vga640x480.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -78,8 +106,24 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/draw_game.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/gen_line.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/top_square.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -87,8 +131,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="top_square"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="draw_game"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log top_square.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_square.tcl
+    with args -log draw_game.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source draw_game.tcl
 
 
 ****** Vivado v2019.1 (64-bit)
@@ -8,18 +8,29 @@
   **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
-source top_square.tcl -notrace
-Command: synth_design -top top_square -part xc7a100tcsg324-1
+source draw_game.tcl -notrace
+Command: synth_design -top draw_game -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 1112 
+INFO: Helper process launched with PID 8408 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 810.020 ; gain = 178.102
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 809.594 ; gain = 176.879
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'top_square' [X:/ec311/project/vga_testing/top_square.v:21]
+INFO: [Synth 8-6157] synthesizing module 'draw_game' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_game.v:23]
+	Parameter LINE_WIDTH bound to: 18 - type: integer 
+	Parameter LINE_INC bound to: 142 - type: integer 
+	Parameter LINE_0_LOC bound to: 8 - type: integer 
+	Parameter LINE_1_LOC bound to: 150 - type: integer 
+	Parameter LINE_2_LOC bound to: 292 - type: integer 
+	Parameter LINE_3_LOC bound to: 434 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'clock_divider' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/clock_divider.v:23]
+	Parameter CLK_I_SPEED bound to: 100000000 - type: integer 
+	Parameter CLK_O_SPEED bound to: 240 - type: integer 
+	Parameter CLK_O_PERIOD bound to: 208333 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider' (1#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/clock_divider.v:23]
 INFO: [Synth 8-6157] synthesizing module 'vga640x480' [X:/ec311/project/vga_testing/vga640x480.v:23]
 	Parameter HS_STA bound to: 16 - type: integer 
 	Parameter HS_END bound to: 112 - type: integer 
@@ -29,21 +40,133 @@ INFO: [Synth 8-6157] synthesizing module 'vga640x480' [X:/ec311/project/vga_test
 	Parameter VA_END bound to: 480 - type: integer 
 	Parameter LINE bound to: 800 - type: integer 
 	Parameter SCREEN bound to: 525 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'vga640x480' (1#1) [X:/ec311/project/vga_testing/vga640x480.v:23]
-WARNING: [Synth 8-3848] Net VGA_B in module/entity top_square does not have driver. [X:/ec311/project/vga_testing/top_square.v:30]
-INFO: [Synth 8-6155] done synthesizing module 'top_square' (2#1) [X:/ec311/project/vga_testing/top_square.v:21]
-WARNING: [Synth 8-3331] design top_square has unconnected port VGA_R[2]
-WARNING: [Synth 8-3331] design top_square has unconnected port VGA_R[1]
-WARNING: [Synth 8-3331] design top_square has unconnected port VGA_R[0]
-WARNING: [Synth 8-3331] design top_square has unconnected port VGA_G[2]
-WARNING: [Synth 8-3331] design top_square has unconnected port VGA_G[1]
-WARNING: [Synth 8-3331] design top_square has unconnected port VGA_G[0]
-WARNING: [Synth 8-3331] design top_square has unconnected port VGA_B[3]
-WARNING: [Synth 8-3331] design top_square has unconnected port VGA_B[2]
-WARNING: [Synth 8-3331] design top_square has unconnected port VGA_B[1]
-WARNING: [Synth 8-3331] design top_square has unconnected port VGA_B[0]
+INFO: [Synth 8-6155] done synthesizing module 'vga640x480' (2#1) [X:/ec311/project/vga_testing/vga640x480.v:23]
+INFO: [Synth 8-6157] synthesizing module 'line_generate' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:23]
+INFO: [Synth 8-6157] synthesizing module 'LFSR' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/LFSR.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'LFSR' (3#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/LFSR.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'line_generate' (4#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:23]
+INFO: [Synth 8-6157] synthesizing module 'draw_line' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_line.v:23]
+	Parameter LineMidpointLoc bound to: 8 - type: integer 
+	Parameter LineWidth bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'draw_line' (5#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_line.v:23]
+INFO: [Synth 8-6157] synthesizing module 'draw_line__parameterized0' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_line.v:23]
+	Parameter LineMidpointLoc bound to: 150 - type: integer 
+	Parameter LineWidth bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'draw_line__parameterized0' (5#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_line.v:23]
+INFO: [Synth 8-6157] synthesizing module 'draw_line__parameterized1' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_line.v:23]
+	Parameter LineMidpointLoc bound to: 292 - type: integer 
+	Parameter LineWidth bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'draw_line__parameterized1' (5#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_line.v:23]
+INFO: [Synth 8-6157] synthesizing module 'draw_line__parameterized2' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_line.v:23]
+	Parameter LineMidpointLoc bound to: 434 - type: integer 
+	Parameter LineWidth bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'draw_line__parameterized2' (5#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_line.v:23]
+WARNING: [Synth 8-3848] Net VGA_G in module/entity draw_game does not have driver. [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_game.v:29]
+WARNING: [Synth 8-3848] Net VGA_B in module/entity draw_game does not have driver. [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_game.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'draw_game' (6#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_game.v:23]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[639]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[638]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[637]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[636]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[635]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[634]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[633]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[632]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[631]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[630]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[629]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[628]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[627]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[626]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[625]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[624]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[623]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[622]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[621]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[620]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[619]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[618]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[617]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[616]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[615]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[614]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[613]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[612]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[611]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[610]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[609]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[608]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[607]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[606]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[605]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[604]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[603]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[602]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[601]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[600]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[599]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[598]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[597]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[596]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[595]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[594]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[593]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[592]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[591]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[590]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[589]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[588]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[587]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[586]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[585]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[584]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[583]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[582]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[581]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[580]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[579]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[578]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[577]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[576]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[575]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[574]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[573]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[572]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[571]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[570]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[569]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[568]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[567]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[566]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[565]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[564]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[563]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[562]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[561]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[560]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[559]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[558]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[557]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[556]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[555]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[554]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[553]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[552]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[551]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[550]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[549]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[548]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[547]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[546]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[545]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[544]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[543]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[542]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[541]
+WARNING: [Synth 8-3331] design draw_line has unconnected port line_i[540]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 873.813 ; gain = 241.895
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 873.293 ; gain = 240.578
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -56,10 +179,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 873.813 ; gain = 241.895
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 873.293 ; gain = 240.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 873.813 ; gain = 241.895
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 873.293 ; gain = 240.578
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -67,34 +190,40 @@ Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [X:/ec311/project/vga_testing/Nexys4DDR_Master.xdc]
 Finished Parsing XDC File [X:/ec311/project/vga_testing/Nexys4DDR_Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [X:/ec311/project/vga_testing/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_square_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/top_square_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [X:/ec311/project/vga_testing/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/draw_game_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/draw_game_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 990.465 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1001.914 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.082 . Memory (MB): peak = 990.465 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 1001.914 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 990.465 ; gain = 358.547
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1001.914 ; gain = 369.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 990.465 ; gain = 358.547
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1001.914 ; gain = 369.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 990.465 ; gain = 358.547
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1001.914 ; gain = 369.199
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'ns_reg' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+WARNING: [Synth 8-327] inferring latch for variable 'new_bit_reg' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:47]
+WARNING: [Synth 8-327] inferring latch for variable 'count_reg' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:46]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 990.465 ; gain = 358.547
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 1001.914 ; gain = 369.199
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'gen_line_0' (line_generate) to 'gen_line_1'
+INFO: [Synth 8-223] decloning instance 'gen_line_0' (line_generate) to 'gen_line_2'
+INFO: [Synth 8-223] decloning instance 'gen_line_0' (line_generate) to 'gen_line_3'
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -106,20 +235,25 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input     32 Bit       Adders := 1     
 	   2 Input     17 Bit       Adders := 1     
 	   2 Input     10 Bit       Adders := 3     
-	  11 Input      1 Bit       Adders := 1     
-	  12 Input      1 Bit       Adders := 1     
-	  15 Input      1 Bit       Adders := 1     
-	   2 Input      1 Bit       Adders := 7     
+	   2 Input      7 Bit       Adders := 1     
++---XORs : 
+	   4 Input      1 Bit         XORs := 1     
 +---Registers : 
+	              640 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
 	               16 Bit    Registers := 1     
 	               10 Bit    Registers := 2     
-	                1 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
 +---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
 	   2 Input     10 Bit        Muxes := 5     
 	   2 Input      9 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 20    
+	   2 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -127,19 +261,22 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module top_square 
+Module draw_game 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     17 Bit       Adders := 1     
-	  11 Input      1 Bit       Adders := 1     
-	  12 Input      1 Bit       Adders := 1     
-	  15 Input      1 Bit       Adders := 1     
-	   2 Input      1 Bit       Adders := 7     
 +---Registers : 
 	               16 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
+Module clock_divider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input      1 Bit        Muxes := 17    
+	   2 Input     32 Bit        Muxes := 1     
 Module vga640x480 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -150,6 +287,32 @@ Detailed RTL Component Info :
 	   2 Input     10 Bit        Muxes := 5     
 	   2 Input      9 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 3     
+Module LFSR 
+Detailed RTL Component Info : 
++---XORs : 
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+Module line_generate 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	              640 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module draw_line__parameterized0 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      1 Bit        Muxes := 1     
+Module draw_line__parameterized1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      1 Bit        Muxes := 1     
+Module draw_line__parameterized2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -166,18 +329,8 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3331] design top_square has unconnected port VGA_R[2]
-WARNING: [Synth 8-3331] design top_square has unconnected port VGA_R[1]
-WARNING: [Synth 8-3331] design top_square has unconnected port VGA_R[0]
-WARNING: [Synth 8-3331] design top_square has unconnected port VGA_G[2]
-WARNING: [Synth 8-3331] design top_square has unconnected port VGA_G[1]
-WARNING: [Synth 8-3331] design top_square has unconnected port VGA_G[0]
-WARNING: [Synth 8-3331] design top_square has unconnected port VGA_B[3]
-WARNING: [Synth 8-3331] design top_square has unconnected port VGA_B[2]
-WARNING: [Synth 8-3331] design top_square has unconnected port VGA_B[1]
-WARNING: [Synth 8-3331] design top_square has unconnected port VGA_B[0]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 990.465 ; gain = 358.547
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:29 . Memory (MB): peak = 1001.914 ; gain = 369.199
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -189,13 +342,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 990.465 ; gain = 358.547
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:36 . Memory (MB): peak = 1001.914 ; gain = 369.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 990.465 ; gain = 358.547
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:37 . Memory (MB): peak = 1001.914 ; gain = 369.199
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -207,7 +360,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 990.465 ; gain = 358.547
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:37 . Memory (MB): peak = 1001.914 ; gain = 369.199
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -231,20 +384,121 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 996.129 ; gain = 364.211
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 1006.211 ; gain = 373.496
 ---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[639] with 1st driver pin 'gen_line_0/ns_reg[639]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[639] with 2nd driver pin 'gen_line_0/ns_reg[639]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/new_bit with 1st driver pin 'gen_line_0/new_bit_reg__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:38]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/new_bit with 2nd driver pin 'gen_line_0/new_bit_reg/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:47]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[638] with 1st driver pin 'gen_line_0/ns_reg[638]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[638] with 2nd driver pin 'gen_line_0/ns_reg[638]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[637] with 1st driver pin 'gen_line_0/ns_reg[637]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[637] with 2nd driver pin 'gen_line_0/ns_reg[637]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[636] with 1st driver pin 'gen_line_0/ns_reg[636]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[636] with 2nd driver pin 'gen_line_0/ns_reg[636]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[635] with 1st driver pin 'gen_line_0/ns_reg[635]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[635] with 2nd driver pin 'gen_line_0/ns_reg[635]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[634] with 1st driver pin 'gen_line_0/ns_reg[634]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[634] with 2nd driver pin 'gen_line_0/ns_reg[634]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[633] with 1st driver pin 'gen_line_0/ns_reg[633]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[633] with 2nd driver pin 'gen_line_0/ns_reg[633]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[632] with 1st driver pin 'gen_line_0/ns_reg[632]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[632] with 2nd driver pin 'gen_line_0/ns_reg[632]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[631] with 1st driver pin 'gen_line_0/ns_reg[631]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[631] with 2nd driver pin 'gen_line_0/ns_reg[631]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[630] with 1st driver pin 'gen_line_0/ns_reg[630]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[630] with 2nd driver pin 'gen_line_0/ns_reg[630]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[629] with 1st driver pin 'gen_line_0/ns_reg[629]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[629] with 2nd driver pin 'gen_line_0/ns_reg[629]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[628] with 1st driver pin 'gen_line_0/ns_reg[628]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[628] with 2nd driver pin 'gen_line_0/ns_reg[628]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[627] with 1st driver pin 'gen_line_0/ns_reg[627]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[627] with 2nd driver pin 'gen_line_0/ns_reg[627]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[626] with 1st driver pin 'gen_line_0/ns_reg[626]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[626] with 2nd driver pin 'gen_line_0/ns_reg[626]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[625] with 1st driver pin 'gen_line_0/ns_reg[625]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[625] with 2nd driver pin 'gen_line_0/ns_reg[625]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[624] with 1st driver pin 'gen_line_0/ns_reg[624]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[624] with 2nd driver pin 'gen_line_0/ns_reg[624]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[623] with 1st driver pin 'gen_line_0/ns_reg[623]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[623] with 2nd driver pin 'gen_line_0/ns_reg[623]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[622] with 1st driver pin 'gen_line_0/ns_reg[622]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[622] with 2nd driver pin 'gen_line_0/ns_reg[622]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[621] with 1st driver pin 'gen_line_0/ns_reg[621]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[621] with 2nd driver pin 'gen_line_0/ns_reg[621]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[620] with 1st driver pin 'gen_line_0/ns_reg[620]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[620] with 2nd driver pin 'gen_line_0/ns_reg[620]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[619] with 1st driver pin 'gen_line_0/ns_reg[619]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[619] with 2nd driver pin 'gen_line_0/ns_reg[619]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[618] with 1st driver pin 'gen_line_0/ns_reg[618]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[618] with 2nd driver pin 'gen_line_0/ns_reg[618]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[617] with 1st driver pin 'gen_line_0/ns_reg[617]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[617] with 2nd driver pin 'gen_line_0/ns_reg[617]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[616] with 1st driver pin 'gen_line_0/ns_reg[616]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[616] with 2nd driver pin 'gen_line_0/ns_reg[616]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[615] with 1st driver pin 'gen_line_0/ns_reg[615]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[615] with 2nd driver pin 'gen_line_0/ns_reg[615]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[614] with 1st driver pin 'gen_line_0/ns_reg[614]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[614] with 2nd driver pin 'gen_line_0/ns_reg[614]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[613] with 1st driver pin 'gen_line_0/ns_reg[613]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[613] with 2nd driver pin 'gen_line_0/ns_reg[613]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[612] with 1st driver pin 'gen_line_0/ns_reg[612]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[612] with 2nd driver pin 'gen_line_0/ns_reg[612]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[611] with 1st driver pin 'gen_line_0/ns_reg[611]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[611] with 2nd driver pin 'gen_line_0/ns_reg[611]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[610] with 1st driver pin 'gen_line_0/ns_reg[610]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[610] with 2nd driver pin 'gen_line_0/ns_reg[610]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[609] with 1st driver pin 'gen_line_0/ns_reg[609]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[609] with 2nd driver pin 'gen_line_0/ns_reg[609]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[608] with 1st driver pin 'gen_line_0/ns_reg[608]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[608] with 2nd driver pin 'gen_line_0/ns_reg[608]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[607] with 1st driver pin 'gen_line_0/ns_reg[607]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[607] with 2nd driver pin 'gen_line_0/ns_reg[607]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[606] with 1st driver pin 'gen_line_0/ns_reg[606]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[606] with 2nd driver pin 'gen_line_0/ns_reg[606]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[605] with 1st driver pin 'gen_line_0/ns_reg[605]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[605] with 2nd driver pin 'gen_line_0/ns_reg[605]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[604] with 1st driver pin 'gen_line_0/ns_reg[604]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[604] with 2nd driver pin 'gen_line_0/ns_reg[604]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[603] with 1st driver pin 'gen_line_0/ns_reg[603]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[603] with 2nd driver pin 'gen_line_0/ns_reg[603]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[602] with 1st driver pin 'gen_line_0/ns_reg[602]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[602] with 2nd driver pin 'gen_line_0/ns_reg[602]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[601] with 1st driver pin 'gen_line_0/ns_reg[601]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[601] with 2nd driver pin 'gen_line_0/ns_reg[601]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[600] with 1st driver pin 'gen_line_0/ns_reg[600]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[600] with 2nd driver pin 'gen_line_0/ns_reg[600]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[599] with 1st driver pin 'gen_line_0/ns_reg[599]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[599] with 2nd driver pin 'gen_line_0/ns_reg[599]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[598] with 1st driver pin 'gen_line_0/ns_reg[598]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[598] with 2nd driver pin 'gen_line_0/ns_reg[598]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[597] with 1st driver pin 'gen_line_0/ns_reg[597]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[597] with 2nd driver pin 'gen_line_0/ns_reg[597]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[596] with 1st driver pin 'gen_line_0/ns_reg[596]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[596] with 2nd driver pin 'gen_line_0/ns_reg[596]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[595] with 1st driver pin 'gen_line_0/ns_reg[595]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[595] with 2nd driver pin 'gen_line_0/ns_reg[595]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[594] with 1st driver pin 'gen_line_0/ns_reg[594]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[594] with 2nd driver pin 'gen_line_0/ns_reg[594]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[593] with 1st driver pin 'gen_line_0/ns_reg[593]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[593] with 2nd driver pin 'gen_line_0/ns_reg[593]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[592] with 1st driver pin 'gen_line_0/ns_reg[592]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[592] with 2nd driver pin 'gen_line_0/ns_reg[592]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[591] with 1st driver pin 'gen_line_0/ns_reg[591]__0/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin gen_line_0/ns[591] with 2nd driver pin 'gen_line_0/ns_reg[591]/Q' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v:50]
+INFO: [Common 17-14] Message 'Synth 8-6859' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 
 Report Check Netlist: 
 +------+------------------+-------+---------+-------+------------------+
 |      |Item              |Errors |Warnings |Status |Description       |
 +------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
+|1     |multi_driven_nets |      0|      648|Failed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 996.129 ; gain = 364.211
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 1006.211 ; gain = 373.496
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -256,25 +510,39 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 996.129 ; gain = 364.211
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 1006.211 ; gain = 373.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 996.129 ; gain = 364.211
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 1006.211 ; gain = 373.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 996.129 ; gain = 364.211
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 1006.211 ; gain = 373.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 996.129 ; gain = 364.211
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 1006.211 ; gain = 373.496
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+--------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                       | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+--------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|draw_game   | gen_line_0/rn/next_LFSR_reg[3] | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+--------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -290,49 +558,59 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     1|
-|2     |CARRY4 |     1|
-|3     |LUT1   |     2|
-|4     |LUT2   |    26|
-|5     |LUT3   |     8|
-|6     |LUT4   |    22|
-|7     |LUT5   |    19|
-|8     |LUT6   |    43|
-|9     |FDRE   |    24|
-|10    |IBUF   |    18|
-|11    |OBUF   |     4|
-|12    |OBUFT  |    10|
+|1     |BUFG   |     3|
+|2     |CARRY4 |     9|
+|3     |LUT1   |     5|
+|4     |LUT2   |     6|
+|5     |LUT3   |     7|
+|6     |LUT4   |    16|
+|7     |LUT5   |    58|
+|8     |LUT6   |   190|
+|9     |MUXF7  |    84|
+|10    |MUXF8  |    38|
+|11    |SRL16E |     1|
+|12    |FDCE   |  1321|
+|13    |FDRE   |    29|
+|14    |LD     |   648|
+|15    |IBUF   |     2|
+|16    |OBUF   |     3|
+|17    |OBUFT  |    11|
 +------+-------+------+
 
 Report Instance Areas: 
-+------+----------+-----------+------+
-|      |Instance  |Module     |Cells |
-+------+----------+-----------+------+
-|1     |top       |           |   178|
-|2     |  display |vga640x480 |   133|
-+------+----------+-----------+------+
++------+-------------+--------------+------+
+|      |Instance     |Module        |Cells |
++------+-------------+--------------+------+
+|1     |top          |              |  2431|
+|2     |  clk_240hz  |clock_divider |    82|
+|3     |  display    |vga640x480    |    76|
+|4     |  gen_line_0 |line_generate |  2247|
+|5     |    rn       |LFSR          |     7|
++------+-------------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 996.129 ; gain = 364.211
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 1006.211 ; gain = 373.496
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 996.129 ; gain = 247.559
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 996.129 ; gain = 364.211
+Synthesis finished with 0 errors, 1296 critical warnings and 14 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:38 . Memory (MB): peak = 1006.211 ; gain = 244.875
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:41 . Memory (MB): peak = 1006.211 ; gain = 373.496
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 779 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'draw_game' is not ideal for floorplanning, since the cellview 'line_generate' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1013.141 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1020.309 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 648 instances were transformed.
+  LD => LDCE: 648 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-16 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
+35 Infos, 106 Warnings, 100 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 1013.141 ; gain = 658.957
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1013.141 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:53 . Memory (MB): peak = 1020.309 ; gain = 665.375
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1020.309 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'X:/ec311/project/vga_testing/vga_testing.runs/synth_1/top_square.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file top_square_utilization_synth.rpt -pb top_square_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Nov 29 10:54:09 2021...
+INFO: [Common 17-1381] The checkpoint 'X:/ec311/project/vga_testing/vga_testing.runs/synth_1/draw_game.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file draw_game_utilization_synth.rpt -pb draw_game_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Dec  3 14:57:44 2021...

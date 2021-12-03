@@ -1,0 +1,9 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+X:/ec311/project/vga_testing/vga_testing.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+X:/ec311/project/vga_testing/vga_testing.srcs/sim_1/new/LFSR_tb.v,1638561937,verilog,,,,LFSR_tb,,,,,,,,
+X:/ec311/project/vga_testing/vga_testing.srcs/sim_1/new/line_generate_test.v,1638561848,verilog,,,,line_generate_test,,,,,,,,
+X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/LFSR.v,1638560812,verilog,,X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v,,LFSR,,,,,,,,
+X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v,1638561621,verilog,,X:/ec311/project/vga_testing/vga_testing.srcs/sim_1/new/line_generate_test.v,,line_generate,,,,,,,,
