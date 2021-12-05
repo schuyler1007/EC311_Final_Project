@@ -1,8 +1,8 @@
-module LFSR (clk_i, en_i, nextbit);
+module LFSR #(parameter seed = 0) (clk_i, en_i, nextbit);
     input clk_i, en_i;
     output reg nextbit;
 
-    reg [7:0] next_LFSR = 8'b0;
+    reg [7:0] next_LFSR = seed;
 
     always@(posedge clk_i) begin
         if (en_i == 1'b1) begin
