@@ -42,12 +42,11 @@ module draw_game(
     reg pix_stb;
     
     localparam LINE_WIDTH = 18;
-    localparam LINE_INC = 142;
-    localparam LINE_0_LOC = LINE_WIDTH/2 - 1; // line midpoint location in pixels
+    localparam LINE_INC = 144;
+    localparam LINE_0_LOC = LINE_WIDTH; // line midpoint location in pixels
     localparam LINE_1_LOC = LINE_0_LOC + LINE_INC; // line midpoint location in pixels
     localparam LINE_2_LOC = LINE_1_LOC + LINE_INC; // line midpoint location in pixels
     localparam LINE_3_LOC = LINE_2_LOC + LINE_INC; // line midpoint location in pixels
-
         
     // set line speed of 240 pix/s
     clock_divider #(.CLK_O_SPEED(240)) clk_240hz(

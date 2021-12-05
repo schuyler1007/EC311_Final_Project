@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 12/02/2021 10:04:57 PM
+// Create Date: 12/03/2021 03:49:03 PM
 // Design Name: 
-// Module Name: gen_line
+// Module Name: randbit
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,30 +20,21 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module gen_line
-    # (parameter GapWidth = 80) (
+module randbit 
+    # (parameter Seed = 8'b0) (
     input clk_i,
     input rst_i,
-    output reg [639:0] line_o
+    output reg rand_o
     );
     
-    reg [8:0] pix_count = 9'b0;
-    wire rand_pix;
+    reg [7:0] next_lfsr = 8'b0;
     
-    randbit randbit_0(
-        .rst_i(rst_i),
-        .clk_i(clk_i),
-        .rand_o(rand_pix)
-    );
-    
-    always@(posedge clk_i or negedge rst_i) begin
+    always @(posedge clk_i or negedge rst_i) begin
         if (rst_i == 0) begin
-            line_o <= {640{1'b0}};
+            next_lfsr <= Seed;
         end else begin
-            pix_count = pix_count + 1'b1;
-            if (pix_count == GapWidth) begin
-                line_o = {
-            end
+            next_lfsr <= {next_lfsr[6:0], rand_o};
+            rand_o = next_lfsr[7] ^~ next_lfsr[5] ^~ next_lfsr[4] ^~ next_lfsr[3];
         end
     end
 endmodule

@@ -31,30 +31,23 @@ module line_generate(reset_i, clk_i, en_i, line_o);
     LFSR rn(.clk_i(clk_i), .en_i(en_i), .nextbit(rand_num));
 
     always@(posedge clk_i or negedge reset_i) begin
-        if (reset_i==0) begin
-            cs <= 0;
-            ns <= 0;
-            count <= 0;
+        if (reset_i == 0) begin
+            cs <= {640{1'b1}};
+            ns <= {640{1'b1}};
             new_bit <= 0;
         end else begin
             cs <= ns;
-            count <= count + 1;
-             if (count == 80) begin
-                new_bit <= rand_num;
-                count <= 0;
-            end else begin
-              ns <= {new_bit, cs[638:0]};  
-            end
+            count = count + 1;
         end
     end // always
 
-//    always@(*) begin
-//        if (count == 80) begin
-//            new_bit <= rand_num;
-//            count <= 0;
-//        end else
-//            ns <= {new_bit, cs[638:0]};
-//    end // always
+    always@(*) begin
+        if (count == 80) begin
+            new_bit = rand_num;
+            count = 0;
+        end 
+        ns = {new_bit, cs[639:1]};
+    end // always
     
-       assign line_o = cs;
+    assign line_o = cs;
 endmodule
