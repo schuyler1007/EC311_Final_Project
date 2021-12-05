@@ -31,7 +31,7 @@ module move_player(reset, clk, grav_dir, is_dead, lines,  height);
     
     always @ (posedge clk or negedge reset) begin
         if (reset==0)
-            height = 180;            //starts player at height of middle line
+            height <= 180;            //starts player at height of middle line
         else if (is_dead==0)
             height <=next;
     end
