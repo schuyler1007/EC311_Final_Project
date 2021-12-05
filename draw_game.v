@@ -11,6 +11,7 @@ module draw_game(
     
     wire clk_line;
     wire clk_lfsr;
+    wire rst_rnd = ~rst_i; // flip reset (active low)
     wire rst_display = ~rst_cpu; // flip vga reset for display (active low on artix board)
     wire [639:0] line0_int, line1_int, line2_int, line3_int;
     wire line0_region, line1_region, line2_region, line3_region;
@@ -31,13 +32,13 @@ module draw_game(
         
     // set line speed of 240 pix/s
     clock_divider #(.CLK_O_SPEED(240)) clk_240hz(
-        .rst_i(rst_i),
+        .rst_i(rst_rnd),
         .clk_i(clk_i),
         .clk_o(clk_line)
     );
     
     clock_divider #(.CLK_O_SPEED(3)) clk_rand(
-        .rst_i(rst_i),
+        .rst_i(rst_rnd),
         .clk_i(clk_i),
         .clk_o(clk_lfsr)
     );
@@ -61,7 +62,7 @@ module draw_game(
          .clk_i(clk_line),
          .clk_lfsr(clk_lfsr),
          .en_i(1'b1),
-         .reset_i(rst_i),
+         .reset_i(rst_rnd),
          .line_o(line0_int)
     );
     
@@ -69,7 +70,7 @@ module draw_game(
          .clk_i(clk_line),
          .clk_lfsr(clk_lfsr),
          .en_i(1'b1),
-         .reset_i(rst_i),
+         .reset_i(rst_rnd),
          .line_o(line1_int)
     );
     
@@ -77,7 +78,7 @@ module draw_game(
          .clk_i(clk_line),
          .clk_lfsr(clk_lfsr),
          .en_i(1'b1),
-         .reset_i(rst_i),
+         .reset_i(rst_rnd),
          .line_o(line2_int)
     );
     
@@ -85,7 +86,7 @@ module draw_game(
          .clk_i(clk_line),
          .clk_lfsr(clk_lfsr),
          .en_i(1'b1),
-         .reset_i(rst_i),
+         .reset_i(rst_rnd),
          .line_o(line3_int)
     );
     
