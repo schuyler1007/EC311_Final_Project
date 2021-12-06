@@ -20,11 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module top(clk, reset, start, p1_en, p2_en, p3_en, p4_en, p1_toggle, p2_toggle, p3_toggle, p4_toggle);
-    input clk, reset, start;
+module top(clk, rst, strt, p1_en, p2_en, p3_en, p4_en, p1_toggle, p2_toggle, p3_toggle, p4_toggle);
+    input clk, rst, strt;
     input p1_en, p2_en, p3_en, p4_en;                       // switches to enable each player
     input p1_toggle, p2_toggle, p3_toggle, p4_toggle;       // buttons to toggle each player's gravity
     
+    wire         reset, start;                              // debounces reset and start
     wire         p1_play, p2_play, p3_play, p4_play;        // players are in play
     wire         p1_grav, p2_grav, p3_grav, p4_grav;        // debounced  toggling gravity buttons
     wire [8:0]   h_1, h_2, h_3, h_4;                        // heights of players
@@ -40,6 +41,9 @@ module top(clk, reset, start, p1_en, p2_en, p3_en, p4_en, p1_toggle, p2_toggle, 
     debouncer                 p2_gravity  (.clk_i(clk), .reset_i(reset), .buttonin_i(p2_toggle), .buttonout_o(p2_grav));
     debouncer                 p3_gravity  (.clk_i(clk), .reset_i(reset), .buttonin_i(p3_toggle), .buttonout_o(p3_grav));
     debouncer                 p4_gravity  (.clk_i(clk), .reset_i(reset), .buttonin_i(p4_toggle), .buttonout_o(p4_grav));
+    
+    debouncer                 reset_db    (.clk_i(clk), .reset_i(reset), .buttonin_i(rst), .buttonout_o(reset));
+    debouncer                 start_db    (.clk_i(clk), .reset_i(reset), .buttonin_i(strt), .buttonout_o(start));
     
     // get slower clock2
     clock_divider #(.CLK_O_SPEED(80)) Hz_80 (.clk_i(clk), .rst_i(reset), .clk_o(clk_80Hz));
