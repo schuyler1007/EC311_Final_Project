@@ -47,18 +47,33 @@ module top(clk, reset, start, p1_en, p2_en, p3_en, p4_en, p1_toggle, p2_toggle, 
     start_game                lock_players(.reset(reset), .start(start), .p1_i(p1_en), .p2_i(p2_en), .p3_i(p3_en), .p4_i(p4_en), .p1_o(p1_play), .p2_o(p2_play), .p3_o(p3_play), .p4_o(p4_play), .enable_board(enable_board));
     
     // player 1
-    dead                      player_dead (.reset(reset), .in_game(p1_play), .height(h_1), .is_dead(dead_1));
-    gavity_direction          gravity     (.clk(clk_60Hz), .reset(reset), .is_dead(dead_1), .switch(p1_grav), .lines(p1_lines), .height(h_1), .dir(gv_1));
-    move_player               move        (.clk(clk_60Hz), .reset(reset), .grav_dir(gv_1), .is_dead(dead_1), .lines(p1_lines), .height(h_1));
-    
-    //generate lines (change later)
-    line_generate #(.seed(0)) top         (.clk(clk_60Hz), .reset(reset), .enable_board(enable_board), .line_o(ground_top));
-    line_generate #(.seed(4)) middle      (.clk(clk_60Hz), .reset(reset), .enable_board(enable_board), .line_o(ground_middle));
-    line_generate #(.seed(2)) bottom      (.clk(clk_60Hz), .reset(reset), .enable_board(enable_board), .line_o(ground_bottom));
-    
-    // existance of lines at each player's x coordinate
-    assign p1_lines = {ground_bottom[20], ground_middle[20], ground_top[20]};
-    assign p2_lines = {ground_bottom[70], ground_middle[70], ground_top[70]};
-    assign p3_lines = {ground_bottom[110], ground_middle[110], ground_top[110]};
-    assign p4_lines = {ground_bottom[160], ground_middle[160], ground_top[160]};
+    dead                      player1_dead (.reset(reset), .in_game(p1_play), .height(h_1), .is_dead(dead_1));
+    gavity_direction          gravity1     (.clk(clk_60Hz), .reset(reset), .is_dead(dead_1), .switch(p1_grav), .lines(p1_lines), .height(h_1), .dir(gv_1));
+    move_player               move1        (.clk(clk_60Hz), .reset(reset), .grav_dir(gv_1), .is_dead(dead_1), .lines(p1_lines), .height(h_1));
+
+    // player 2
+    dead                      player2_dead (.reset(reset), .in_game(p2_play), .height(h_2), .is_dead(dead_2));
+    gavity_direction          gravity2     (.clk(clk_60Hz), .reset(reset), .is_dead(dead_2), .switch(p2_grav), .lines(p2_lines), .height(h_2), .dir(gv_2));
+    move_player               move2        (.clk(clk_60Hz), .reset(reset), .grav_dir(gv_2), .is_dead(dead_2), .lines(p2_lines), .height(h_2));
+
+    // player 3
+    dead                      player3_dead (.reset(reset), .in_game(p3_play), .height(h_3), .is_dead(dead_3));
+    gavity_direction          gravity3     (.clk(clk_60Hz), .reset(reset), .is_dead(dead_3), .switch(p3_grav), .lines(p3_lines), .height(h_3), .dir(gv_3));
+    move_player               move3        (.clk(clk_60Hz), .reset(reset), .grav_dir(gv_3), .is_dead(dead_3), .lines(p3_lines), .height(h_3));
+
+    // player 4
+    dead                      player4_dead (.reset(reset), .in_game(p4_play), .height(h_4), .is_dead(dead_4));
+    gavity_direction          gravity4     (.clk(clk_60Hz), .reset(reset), .is_dead(dead_4), .switch(p4_grav), .lines(p4_lines), .height(h_4), .dir(gv_4));
+    move_player               move4        (.clk(clk_60Hz), .reset(reset), .grav_dir(gv_4), .is_dead(dead_4), .lines(p4_lines), .height(h_4));
+
+//    //generate lines (change later)
+//    line_generate #(.seed(0)) top         (.clk(clk_60Hz), .reset(reset), .enable_board(enable_board), .line_o(ground_top));
+//    line_generate #(.seed(4)) middle      (.clk(clk_60Hz), .reset(reset), .enable_board(enable_board), .line_o(ground_middle));
+//    line_generate #(.seed(2)) bottom      (.clk(clk_60Hz), .reset(reset), .enable_board(enable_board), .line_o(ground_bottom));
+//    
+//    // existance of lines at each player's x coordinate
+//    assign p1_lines = {ground_bottom[20], ground_middle[20], ground_top[20]};
+//    assign p2_lines = {ground_bottom[70], ground_middle[70], ground_top[70]};
+//    assign p3_lines = {ground_bottom[110], ground_middle[110], ground_top[110]};
+//    assign p4_lines = {ground_bottom[160], ground_middle[160], ground_top[160]};
 endmodule
