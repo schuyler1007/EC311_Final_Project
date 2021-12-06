@@ -24,6 +24,7 @@ module start_game(reset, start, p1_i, p2_i, p3_i, p4_i, p1_o, p2_o, p3_o, p4_o, 
     input      start, reset;
     input      p1_i, p2_i, p3_i, p4_i;
     output reg p1_o, p2_o, p3_o, p4_o, enable_board;
+    
     reg        lock;
     
     always @ (*) begin

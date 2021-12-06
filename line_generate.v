@@ -1,6 +1,7 @@
 module line_generate #(parameter seed = 0) (reset_i, clk_i, en_i, line_o);
     input reset_i, clk_i, en_i;
     output [639:0] line_o;
+    
     wire  rand_num;
     reg [639:0] cs = {640{1'b1}}, ns = {640{1'b1}};
     reg [6:0] count = 0;

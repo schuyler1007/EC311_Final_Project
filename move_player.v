@@ -27,6 +27,7 @@ module move_player(reset, clk, grav_dir, is_dead, lines,  height);
     input            is_dead;       // if player is dead (0 no, 1 yes)
     input      [2:0] lines;         // Whether the ground exists at each of the 3 heights (120,240,360) at the horizontal location of the bottom left corner of the player.
     output reg [8:0] height;        // height of top left corner of player
+    
     reg        [8:0] next;          // next height
     
     always @ (posedge clk or negedge reset) begin
