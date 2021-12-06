@@ -1,4 +1,5 @@
 // revised topmodule, designed to actually be useful
+// IT HASN'T BEEN CHANGED YET DON'T USE IT
 module top();
 
     reg clk, reset, enter_game, switch, start_game;
