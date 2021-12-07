@@ -1,0 +1,731 @@
+
+*** Running vivado
+    with args -log draw_game.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source draw_game.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source draw_game.tcl -notrace
+Command: synth_design -top draw_game -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7700 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 810.367 ; gain = 178.848
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'draw_game' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_game.v:23]
+	Parameter WINDOW_HEIGHT bound to: 480 - type: integer 
+	Parameter WINDOW_WIDTH bound to: 640 - type: integer 
+	Parameter GAP_WIDTH bound to: 80 - type: integer 
+	Parameter LINE_SPEED bound to: 240 - type: integer 
+	Parameter LINE_WIDTH bound to: 18 - type: integer 
+	Parameter LINE_INC bound to: 149 - type: integer 
+	Parameter LINE_0_LOC bound to: 14 - type: integer 
+	Parameter LINE_1_LOC bound to: 163 - type: integer 
+	Parameter LINE_2_LOC bound to: 312 - type: integer 
+	Parameter LINE_3_LOC bound to: 461 - type: integer 
+	Parameter PLAYER_HEIGHT bound to: 40 - type: integer 
+	Parameter PLAYER_WIDTH bound to: 25 - type: integer 
+	Parameter PLAYER_GAP bound to: 10 - type: integer 
+	Parameter PLAYER_SPEED bound to: 360 - type: integer 
+	Parameter PLAYER_0_OFFSET bound to: 16 - type: integer 
+	Parameter PLAYER_1_OFFSET bound to: 51 - type: integer 
+	Parameter PLAYER_2_OFFSET bound to: 86 - type: integer 
+	Parameter PLAYER_3_OFFSET bound to: 121 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'start_game' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/start_game.v:23]
+	Parameter WaitStart bound to: 3000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'start_game' (1#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/start_game.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clock_divider' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/clock_divider.v:23]
+	Parameter CLK_I_SPEED bound to: 100000000 - type: integer 
+	Parameter CLK_O_SPEED bound to: 240 - type: integer 
+	Parameter CLK_O_PERIOD bound to: 208333 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider' (2#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/clock_divider.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clock_divider__parameterized0' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/clock_divider.v:23]
+	Parameter CLK_I_SPEED bound to: 100000000 - type: integer 
+	Parameter CLK_O_SPEED bound to: 360 - type: integer 
+	Parameter CLK_O_PERIOD bound to: 138888 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider__parameterized0' (2#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/clock_divider.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clock_divider__parameterized1' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/clock_divider.v:23]
+	Parameter CLK_I_SPEED bound to: 100000000 - type: integer 
+	Parameter CLK_O_SPEED bound to: 3 - type: integer 
+	Parameter CLK_O_PERIOD bound to: 16666666 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider__parameterized1' (2#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/clock_divider.v:23]
+INFO: [Synth 8-6157] synthesizing module 'vga640x480' [X:/ec311/project/vga_testing/vga640x480.v:23]
+	Parameter HS_STA bound to: 16 - type: integer 
+	Parameter HS_END bound to: 112 - type: integer 
+	Parameter HA_STA bound to: 160 - type: integer 
+	Parameter VS_STA bound to: 490 - type: integer 
+	Parameter VS_END bound to: 492 - type: integer 
+	Parameter VA_END bound to: 480 - type: integer 
+	Parameter LINE bound to: 800 - type: integer 
+	Parameter SCREEN bound to: 525 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'vga640x480' (3#1) [X:/ec311/project/vga_testing/vga640x480.v:23]
+INFO: [Synth 8-6157] synthesizing module 'gen_line' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/gen_line.v:23]
+	Parameter GapWidth bound to: 80 - type: integer 
+	Parameter Seed bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'lfsr' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/lfsr.v:22]
+	Parameter Seed bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lfsr' (4#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/lfsr.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'gen_line' (5#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/gen_line.v:23]
+INFO: [Synth 8-6157] synthesizing module 'gen_line__parameterized0' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/gen_line.v:23]
+	Parameter GapWidth bound to: 80 - type: integer 
+	Parameter Seed bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'lfsr__parameterized0' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/lfsr.v:22]
+	Parameter Seed bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lfsr__parameterized0' (5#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/lfsr.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'gen_line__parameterized0' (5#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/gen_line.v:23]
+INFO: [Synth 8-6157] synthesizing module 'gen_line__parameterized1' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/gen_line.v:23]
+	Parameter GapWidth bound to: 80 - type: integer 
+	Parameter Seed bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'lfsr__parameterized1' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/lfsr.v:22]
+	Parameter Seed bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lfsr__parameterized1' (5#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/lfsr.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'gen_line__parameterized1' (5#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/gen_line.v:23]
+INFO: [Synth 8-6157] synthesizing module 'gen_line__parameterized2' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/gen_line.v:23]
+	Parameter GapWidth bound to: 80 - type: integer 
+	Parameter Seed bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'lfsr__parameterized2' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/lfsr.v:22]
+	Parameter Seed bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lfsr__parameterized2' (5#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/lfsr.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'gen_line__parameterized2' (5#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/gen_line.v:23]
+INFO: [Synth 8-6157] synthesizing module 'draw_line' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_line.v:23]
+	Parameter LineMidpointLoc bound to: 14 - type: integer 
+	Parameter LineWidth bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'draw_line' (6#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_line.v:23]
+INFO: [Synth 8-6157] synthesizing module 'draw_line__parameterized0' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_line.v:23]
+	Parameter LineMidpointLoc bound to: 163 - type: integer 
+	Parameter LineWidth bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'draw_line__parameterized0' (6#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_line.v:23]
+INFO: [Synth 8-6157] synthesizing module 'draw_line__parameterized1' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_line.v:23]
+	Parameter LineMidpointLoc bound to: 312 - type: integer 
+	Parameter LineWidth bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'draw_line__parameterized1' (6#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_line.v:23]
+INFO: [Synth 8-6157] synthesizing module 'draw_line__parameterized2' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_line.v:23]
+	Parameter LineMidpointLoc bound to: 461 - type: integer 
+	Parameter LineWidth bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'draw_line__parameterized2' (6#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_line.v:23]
+INFO: [Synth 8-6157] synthesizing module 'gen_player' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/gen_player.v:23]
+	Parameter PlayerHeight bound to: 40 - type: integer 
+	Parameter PlayerWidth bound to: 25 - type: integer 
+	Parameter PlayerOffset bound to: 16 - type: integer 
+	Parameter LineWidth bound to: 18 - type: integer 
+	Parameter LineLoc0 bound to: 14 - type: integer 
+	Parameter LineLoc1 bound to: 163 - type: integer 
+	Parameter LineLoc2 bound to: 312 - type: integer 
+	Parameter LineLoc3 bound to: 461 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'detect_collision' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/detect_collision.v:23]
+	Parameter PlayerHeight bound to: 40 - type: integer 
+	Parameter PlayerWidth bound to: 25 - type: integer 
+	Parameter PlayerOffset bound to: 16 - type: integer 
+	Parameter LineWidth bound to: 18 - type: integer 
+	Parameter LineLoc0 bound to: 14 - type: integer 
+	Parameter LineLoc1 bound to: 163 - type: integer 
+	Parameter LineLoc2 bound to: 312 - type: integer 
+	Parameter LineLoc3 bound to: 461 - type: integer 
+	Parameter Line1Top bound to: 154 - type: integer 
+	Parameter Line2Top bound to: 303 - type: integer 
+	Parameter Line3Top bound to: 452 - type: integer 
+	Parameter Line0Bottom bound to: 23 - type: integer 
+	Parameter Line1Bottom bound to: 172 - type: integer 
+	Parameter Line2Bottom bound to: 321 - type: integer 
+	Parameter X_left bound to: 16 - type: integer 
+	Parameter X_right bound to: 41 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'detect_collision' (7#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/detect_collision.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'gen_player' (8#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/gen_player.v:23]
+INFO: [Synth 8-6157] synthesizing module 'gen_player__parameterized0' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/gen_player.v:23]
+	Parameter PlayerHeight bound to: 40 - type: integer 
+	Parameter PlayerWidth bound to: 25 - type: integer 
+	Parameter PlayerOffset bound to: 51 - type: integer 
+	Parameter LineWidth bound to: 18 - type: integer 
+	Parameter LineLoc0 bound to: 14 - type: integer 
+	Parameter LineLoc1 bound to: 163 - type: integer 
+	Parameter LineLoc2 bound to: 312 - type: integer 
+	Parameter LineLoc3 bound to: 461 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'detect_collision__parameterized0' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/detect_collision.v:23]
+	Parameter PlayerHeight bound to: 40 - type: integer 
+	Parameter PlayerWidth bound to: 25 - type: integer 
+	Parameter PlayerOffset bound to: 51 - type: integer 
+	Parameter LineWidth bound to: 18 - type: integer 
+	Parameter LineLoc0 bound to: 14 - type: integer 
+	Parameter LineLoc1 bound to: 163 - type: integer 
+	Parameter LineLoc2 bound to: 312 - type: integer 
+	Parameter LineLoc3 bound to: 461 - type: integer 
+	Parameter Line1Top bound to: 154 - type: integer 
+	Parameter Line2Top bound to: 303 - type: integer 
+	Parameter Line3Top bound to: 452 - type: integer 
+	Parameter Line0Bottom bound to: 23 - type: integer 
+	Parameter Line1Bottom bound to: 172 - type: integer 
+	Parameter Line2Bottom bound to: 321 - type: integer 
+	Parameter X_left bound to: 51 - type: integer 
+	Parameter X_right bound to: 76 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'detect_collision__parameterized0' (8#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/detect_collision.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'gen_player__parameterized0' (8#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/gen_player.v:23]
+INFO: [Synth 8-6157] synthesizing module 'draw_player' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_player.v:23]
+	Parameter PlayerHeight bound to: 40 - type: integer 
+	Parameter PlayerWidth bound to: 25 - type: integer 
+	Parameter PlayerOffset bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'draw_player' (9#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_player.v:23]
+INFO: [Synth 8-6157] synthesizing module 'draw_player__parameterized0' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_player.v:23]
+	Parameter PlayerHeight bound to: 40 - type: integer 
+	Parameter PlayerWidth bound to: 25 - type: integer 
+	Parameter PlayerOffset bound to: 51 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'draw_player__parameterized0' (9#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_player.v:23]
+INFO: [Synth 8-6157] synthesizing module 'draw_game_window' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_game_window.v:23]
+	Parameter WindowHeight bound to: 480 - type: integer 
+	Parameter WindowWidth bound to: 640 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'draw_game_window' (10#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_game_window.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'draw_game' (11#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_game.v:23]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[639]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[638]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[637]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[636]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[635]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[634]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[633]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[632]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[631]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[630]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[629]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[628]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[627]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[626]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[625]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[624]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[623]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[622]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[621]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[620]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[619]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[618]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[617]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[616]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[615]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[614]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[613]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[612]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[611]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[610]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[609]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[608]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[607]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[606]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[605]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[604]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[603]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[602]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[601]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[600]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[599]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[598]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[597]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[596]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[595]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[594]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[593]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[592]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[591]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[590]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[589]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[588]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[587]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[586]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[585]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[584]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[583]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[582]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[581]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[580]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[579]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[578]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[577]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[576]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[575]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[574]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[573]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[572]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[571]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[570]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[569]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[568]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[567]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[566]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[565]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[564]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[563]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[562]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[561]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[560]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[559]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[558]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[557]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[556]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[555]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[554]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[553]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[552]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[551]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[550]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[549]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[548]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[547]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[546]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[545]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[544]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[543]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[542]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[541]
+WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[540]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 873.742 ; gain = 242.223
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 873.742 ; gain = 242.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 873.742 ; gain = 242.223
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [X:/ec311/project/vga_testing/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [X:/ec311/project/vga_testing/Nexys4DDR_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [X:/ec311/project/vga_testing/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/draw_game_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/draw_game_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 993.414 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.025 . Memory (MB): peak = 993.414 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 993.414 ; gain = 361.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 993.414 ; gain = 361.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 993.414 ; gain = 361.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 993.414 ; gain = 361.895
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   2 Input     17 Bit       Adders := 1     
+	   3 Input     11 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 5     
+	   3 Input      9 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 4     
++---Registers : 
+	              640 Bit    Registers := 4     
+	               32 Bit    Registers := 4     
+	               16 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 2     
+	                3 Bit    Registers := 4     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input    640 Bit        Muxes := 4     
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input     10 Bit        Muxes := 5     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module draw_game 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module start_game 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module clock_divider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module clock_divider__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module clock_divider__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module vga640x480 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 3     
++---Registers : 
+	               10 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 5     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module lfsr 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+Module gen_line 
+Detailed RTL Component Info : 
++---Registers : 
+	              640 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    640 Bit        Muxes := 1     
+Module lfsr__parameterized0 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+Module gen_line__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	              640 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    640 Bit        Muxes := 1     
+Module lfsr__parameterized1 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+Module gen_line__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	              640 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    640 Bit        Muxes := 1     
+Module lfsr__parameterized2 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+Module gen_line__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	              640 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    640 Bit        Muxes := 1     
+Module draw_line 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      1 Bit        Muxes := 1     
+Module draw_line__parameterized0 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      1 Bit        Muxes := 1     
+Module draw_line__parameterized1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      1 Bit        Muxes := 1     
+Module draw_line__parameterized2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      1 Bit        Muxes := 1     
+Module detect_collision 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module gen_player 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      9 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+Module detect_collision__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module gen_player__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      9 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+Module draw_player 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     11 Bit       Adders := 1     
+Module draw_player__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     11 Bit       Adders := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 993.414 ; gain = 361.895
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 993.414 ; gain = 361.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 1001.781 ; gain = 370.262
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 1020.941 ; gain = 389.422
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 1025.570 ; gain = 394.051
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 1025.570 ; gain = 394.051
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 1025.570 ; gain = 394.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 1025.570 ; gain = 394.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 1025.570 ; gain = 394.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 1025.570 ; gain = 394.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |    47|
+|3     |LUT1   |     9|
+|4     |LUT2   |  2596|
+|5     |LUT3   |   122|
+|6     |LUT4   |    47|
+|7     |LUT5   |    92|
+|8     |LUT6   |   769|
+|9     |MUXF7  |   337|
+|10    |MUXF8  |   168|
+|11    |FDCE   |   172|
+|12    |FDPE   |  2572|
+|13    |FDRE   |    24|
+|14    |IBUF   |     5|
+|15    |OBUF   |     5|
+|16    |OBUFT  |     9|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------------+---------------------------------+------+
+|      |Instance         |Module                           |Cells |
++------+-----------------+---------------------------------+------+
+|1     |top              |                                 |  6976|
+|2     |  clk_div_lfsr   |clock_divider__parameterized1    |    82|
+|3     |  clk_div_line   |clock_divider                    |    82|
+|4     |  clk_div_player |clock_divider__parameterized0    |    82|
+|5     |  display        |vga640x480                       |   178|
+|6     |  game_window    |draw_game_window                 |     5|
+|7     |  gen_line_0     |gen_line                         |  1583|
+|8     |    lfsr_o       |lfsr                             |     5|
+|9     |  gen_line_1     |gen_line__parameterized0         |  1580|
+|10    |    lfsr_o       |lfsr__parameterized0             |     4|
+|11    |  gen_line_2     |gen_line__parameterized1         |  1580|
+|12    |    lfsr_o       |lfsr__parameterized1             |     4|
+|13    |  gen_line_3     |gen_line__parameterized2         |  1580|
+|14    |    lfsr_o       |lfsr__parameterized2             |     4|
+|15    |  gen_player_0   |gen_player                       |    37|
+|16    |    collision    |detect_collision                 |    11|
+|17    |  gen_player_1   |gen_player__parameterized0       |    37|
+|18    |    collision    |detect_collision__parameterized0 |    11|
+|19    |  start          |start_game                       |   123|
++------+-----------------+---------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 1025.570 ; gain = 394.051
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4851 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:38 . Memory (MB): peak = 1025.570 ; gain = 274.379
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 1025.570 ; gain = 394.051
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 552 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1025.977 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+63 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:50 . Memory (MB): peak = 1025.977 ; gain = 672.965
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1025.977 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'X:/ec311/project/vga_testing/vga_testing.runs/synth_1/draw_game.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file draw_game_utilization_synth.rpt -pb draw_game_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Dec  7 11:13:53 2021...

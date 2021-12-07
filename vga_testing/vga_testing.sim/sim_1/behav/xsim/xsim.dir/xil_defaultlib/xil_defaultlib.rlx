@@ -1,0 +1,13 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+X:/ec311/project/vga_testing/vga640x480.v,1638834846,verilog,,X:/ec311/project/vga_testing/vga_testing.srcs/sim_1/new/vga640x480_test.v,,vga640x480,,,,,,,,
+X:/ec311/project/vga_testing/vga_testing.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+X:/ec311/project/vga_testing/vga_testing.srcs/sim_1/new/LFSR_tb.v,1638751530,verilog,,,,LFSR_tb,,,,,,,,
+X:/ec311/project/vga_testing/vga_testing.srcs/sim_1/new/line_generate_test.v,1638751395,verilog,,,,line_generate_test,,,,,,,,
+X:/ec311/project/vga_testing/vga_testing.srcs/sim_1/new/start_game_test.v,1638845218,verilog,,,,start_game_test,,,,,,,,
+X:/ec311/project/vga_testing/vga_testing.srcs/sim_1/new/vga640x480_test.v,1638834183,verilog,,,,vga640x480_test,,,,,,,,
+X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/gen_line.v,1638754641,verilog,,X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/lfsr.v,,gen_line,,,,,,,,
+X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/lfsr.v,1638749659,verilog,,X:/ec311/project/vga_testing/vga_testing.srcs/sim_1/new/line_generate_test.v,,lfsr,,,,,,,,
+X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/start_game.v,1638845526,verilog,,X:/ec311/project/vga_testing/vga_testing.srcs/sim_1/new/start_game_test.v,,start_game,,,,,,,,
