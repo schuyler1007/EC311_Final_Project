@@ -21,8 +21,8 @@
 
 // 0 mean downward gravity (ie normal) and 1 means upward gravity (ie reverse)
 // allows for change of gravity when button is pressed and player is on a line
-module gravity_direction(clk, reset, is_dead, switch, lines, height, dir);
-    input       clk, reset, switch, is_dead;
+module gravity_direction(clk, reset, switch, lines, height, dir);
+    input       clk, reset, switch;
     input [2:0] lines;
     input [8:0] height;
     output reg  dir;
@@ -32,7 +32,7 @@ module gravity_direction(clk, reset, is_dead, switch, lines, height, dir);
     always @ (posedge clk or negedge reset) begin
         if (reset==0)
             dir <= 0;
-        else if (is_dead==0)
+        else
             dir <= next;
     end
     

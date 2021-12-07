@@ -21,10 +21,9 @@
 
 //player height is from top left corner of player rectangle (assumed 40x60)
 //line[0] = whether top line exists at player x-position, line[1]= middle line, line[2]= top line
-module move_player(reset, clk, grav_dir, is_dead, lines,  height);
+module move_player(reset, clk, grav_dir, lines,  height);
     input            reset, clk;           // clock
     input            grav_dir;      // direction of gravity (0 down, 1 up)
-    input            is_dead;       // if player is dead (0 no, 1 yes)
     input      [2:0] lines;         // Whether the ground exists at each of the 3 heights (120,240,360) at the horizontal location of the bottom left corner of the player.
     output reg [8:0] height;        // height of top left corner of player
     
@@ -32,8 +31,8 @@ module move_player(reset, clk, grav_dir, is_dead, lines,  height);
     
     always @ (posedge clk or negedge reset) begin
         if (reset==0)
-            height = 180;            //starts player at height of middle line
-        else if (is_dead==0)
+            height <= 180;            //starts player at height of middle line
+        else
             height <=next;
     end
     

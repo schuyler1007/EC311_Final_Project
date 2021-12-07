@@ -1,7 +1,8 @@
-module line_generate #(parameter seed = 0) (reset_i, clk_i, clk_lfsr, en_i, line_o, rand_num);
+module line_generate #(parameter seed = 0) (reset_i, clk_i, clk_lfsr, en_i, line_o);
     input clk_i, reset_i, en_i, clk_lfsr;
     output reg [639:0] line_o;
-    output wire rand_num;
+    
+    wire rand_num;
     
     LFSR #(.seed(seed)) rn(.clk_i(clk_lfsr), .en_i(en_i), .nextbit(rand_num));
     
