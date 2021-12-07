@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Tue Dec  7 02:37:02 2021
+| Date         : Tue Dec  7 11:15:27 2021
 | Host         : ECE-PHO115-11 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file draw_game_methodology_drc_routed.rpt -pb draw_game_methodology_drc_routed.pb -rpx draw_game_methodology_drc_routed.rpx
 | Design       : draw_game
@@ -5036,7 +5036,7 @@ Related violations: <none>
 
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell gen_line_0/line_o[0]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) clk_div_lfsr/clk_count_int_reg[0]/CLR, clk_div_lfsr/clk_count_int_reg[10]/CLR, clk_div_lfsr/clk_count_int_reg[11]/CLR, clk_div_lfsr/clk_count_int_reg[12]/CLR, clk_div_lfsr/clk_count_int_reg[13]/CLR, clk_div_lfsr/clk_count_int_reg[14]/CLR, clk_div_lfsr/clk_count_int_reg[15]/CLR, clk_div_lfsr/clk_count_int_reg[16]/CLR, clk_div_lfsr/clk_count_int_reg[17]/CLR, clk_div_lfsr/clk_count_int_reg[18]/CLR, clk_div_lfsr/clk_count_int_reg[19]/CLR, clk_div_lfsr/clk_count_int_reg[1]/CLR, clk_div_lfsr/clk_count_int_reg[20]/CLR, clk_div_lfsr/clk_count_int_reg[21]/CLR, clk_div_lfsr/clk_count_int_reg[22]/CLR (the first 15 of 2711 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell gen_line_0/line_o[0]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) clk_div_lfsr/clk_count_int_reg[0]/CLR, clk_div_lfsr/clk_count_int_reg[10]/CLR, clk_div_lfsr/clk_count_int_reg[11]/CLR, clk_div_lfsr/clk_count_int_reg[12]/CLR, clk_div_lfsr/clk_count_int_reg[13]/CLR, clk_div_lfsr/clk_count_int_reg[14]/CLR, clk_div_lfsr/clk_count_int_reg[15]/CLR, clk_div_lfsr/clk_count_int_reg[16]/CLR, clk_div_lfsr/clk_count_int_reg[17]/CLR, clk_div_lfsr/clk_count_int_reg[18]/CLR, clk_div_lfsr/clk_count_int_reg[19]/CLR, clk_div_lfsr/clk_count_int_reg[1]/CLR, clk_div_lfsr/clk_count_int_reg[20]/CLR, clk_div_lfsr/clk_count_int_reg[21]/CLR, clk_div_lfsr/clk_count_int_reg[22]/CLR (the first 15 of 2744 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 TIMING-18#1 Warning

@@ -39,6 +39,7 @@ module draw_game(
     wire [639:0] line0_int, line1_int, line2_int, line3_int;
     wire line0_region, line1_region, line2_region, line3_region;
     wire all_lines_region;
+    wire window_region;
     
     wire player0_region, player1_region, player2_region, player3_region;
     wire [8:0] player0_int, player1_int, player2_int, player3_int;
@@ -48,19 +49,22 @@ module draw_game(
     reg [15:0] cnt;
     reg pix_stb;
     
+    localparam WINDOW_HEIGHT = 480;
+    localparam WINDOW_WIDTH = 640;
+    
     localparam GAP_WIDTH = 80;
-    localparam LINE_SPEED = 180;
+    localparam LINE_SPEED = 240;
     localparam LINE_WIDTH = 18;
-    localparam LINE_INC = 148;
-    localparam LINE_0_LOC = 18 - 1; // line midpoint location in pixels
+    localparam LINE_INC = 149;
+    localparam LINE_0_LOC = 15 - 1; // line midpoint location in pixels
     localparam LINE_1_LOC = LINE_0_LOC + LINE_INC; // line midpoint location in pixels
     localparam LINE_2_LOC = LINE_1_LOC + LINE_INC; // line midpoint location in pixels
     localparam LINE_3_LOC = LINE_2_LOC + LINE_INC; // line midpoint location in pixels
     
-    localparam PLAYER_HEIGHT = 60;
-    localparam PLAYER_WIDTH = 40;
-    localparam PLAYER_GAP = 20;
-    localparam PLAYER_SPEED = 180;
+    localparam PLAYER_HEIGHT = 40;
+    localparam PLAYER_WIDTH = 25;
+    localparam PLAYER_GAP = 10;
+    localparam PLAYER_SPEED = 360;
     localparam PLAYER_0_OFFSET = 16;
     localparam PLAYER_1_OFFSET = PLAYER_0_OFFSET + PLAYER_WIDTH + PLAYER_GAP;
     localparam PLAYER_2_OFFSET = PLAYER_1_OFFSET + PLAYER_WIDTH + PLAYER_GAP;
@@ -225,9 +229,16 @@ module draw_game(
       .y_i(display_y),
       .region_o(player1_region)
     );
+    
+    draw_game_window #(.WindowHeight(WINDOW_HEIGHT),
+                       .WindowWidth(WINDOW_WIDTH)) game_window(
+       .x_i(display_x),
+       .y_i(display_y),
+       .region_o(window_region)
+    );
 
     assign all_lines_region = line0_region | line1_region | line2_region | line3_region;
-    assign VGA_R[3] = all_lines_region | player0_region;
-    assign VGA_G[3] = all_lines_region;
-    assign VGA_B[3] = all_lines_region | player1_region;
+    assign VGA_R[3] = window_region & (all_lines_region | player0_region);
+    assign VGA_G[3] = window_region & (all_lines_region);
+    assign VGA_B[3] = window_region & (all_lines_region | player1_region);
 endmodule

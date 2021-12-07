@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Tue Dec  7 02:37:05 2021
+| Date             : Tue Dec  7 11:15:29 2021
 | Host             : ECE-PHO115-11 running 64-bit major release  (build 9200)
 | Command          : report_power -file draw_game_power_routed.rpt -pb draw_game_power_summary_routed.pb -rpx draw_game_power_routed.rpx
 | Design           : draw_game
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.102        |
+| Total On-Chip Power (W)  | 0.103        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.005        |
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.002 |        3 |       --- |             --- |
-| Slice Logic    |     0.001 |     6890 |       --- |             --- |
-|   LUT as Logic |     0.001 |     2244 |     63400 |            3.54 |
-|   CARRY4       |    <0.001 |       39 |     15850 |            0.25 |
-|   Register     |    <0.001 |     2735 |    126800 |            2.16 |
-|   Others       |     0.000 |       22 |       --- |             --- |
+| Slice Logic    |     0.002 |     6978 |       --- |             --- |
+|   LUT as Logic |     0.001 |     2278 |     63400 |            3.59 |
+|   CARRY4       |    <0.001 |       47 |     15850 |            0.30 |
+|   Register     |    <0.001 |     2768 |    126800 |            2.18 |
+|   Others       |     0.000 |       24 |       --- |             --- |
 |   BUFG         |     0.000 |        1 |        32 |            3.13 |
-|   F7/F8 Muxes  |     0.000 |      506 |     63400 |            0.80 |
-| Signals        |     0.001 |     3194 |       --- |             --- |
+|   F7/F8 Muxes  |     0.000 |      505 |     63400 |            0.80 |
+| Signals        |     0.001 |     3276 |       --- |             --- |
 | I/O            |    <0.001 |       19 |       210 |            9.05 |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.102 |          |           |                 |
+| Total          |     0.103 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.019 |       0.004 |      0.015 |
+| Vccint    |       1.000 |     0.020 |       0.005 |      0.015 |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
 | Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -139,11 +139,12 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-----------+-----------+
-| Name      | Power (W) |
-+-----------+-----------+
-| draw_game |     0.005 |
-|   start   |     0.001 |
-+-----------+-----------+
++------------------+-----------+
+| Name             | Power (W) |
++------------------+-----------+
+| draw_game        |     0.005 |
+|   clk_div_player |     0.001 |
+|   start          |     0.001 |
++------------------+-----------+
 
 

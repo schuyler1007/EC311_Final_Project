@@ -15,40 +15,47 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 13952 
+INFO: Helper process launched with PID 7700 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 810.109 ; gain = 178.008
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 810.367 ; gain = 178.848
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'draw_game' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_game.v:23]
+	Parameter WINDOW_HEIGHT bound to: 480 - type: integer 
+	Parameter WINDOW_WIDTH bound to: 640 - type: integer 
 	Parameter GAP_WIDTH bound to: 80 - type: integer 
-	Parameter LINE_SPEED bound to: 180 - type: integer 
+	Parameter LINE_SPEED bound to: 240 - type: integer 
 	Parameter LINE_WIDTH bound to: 18 - type: integer 
-	Parameter LINE_INC bound to: 148 - type: integer 
-	Parameter LINE_0_LOC bound to: 17 - type: integer 
-	Parameter LINE_1_LOC bound to: 165 - type: integer 
-	Parameter LINE_2_LOC bound to: 313 - type: integer 
+	Parameter LINE_INC bound to: 149 - type: integer 
+	Parameter LINE_0_LOC bound to: 14 - type: integer 
+	Parameter LINE_1_LOC bound to: 163 - type: integer 
+	Parameter LINE_2_LOC bound to: 312 - type: integer 
 	Parameter LINE_3_LOC bound to: 461 - type: integer 
-	Parameter PLAYER_HEIGHT bound to: 60 - type: integer 
-	Parameter PLAYER_WIDTH bound to: 40 - type: integer 
-	Parameter PLAYER_GAP bound to: 20 - type: integer 
-	Parameter PLAYER_SPEED bound to: 180 - type: integer 
+	Parameter PLAYER_HEIGHT bound to: 40 - type: integer 
+	Parameter PLAYER_WIDTH bound to: 25 - type: integer 
+	Parameter PLAYER_GAP bound to: 10 - type: integer 
+	Parameter PLAYER_SPEED bound to: 360 - type: integer 
 	Parameter PLAYER_0_OFFSET bound to: 16 - type: integer 
-	Parameter PLAYER_1_OFFSET bound to: 76 - type: integer 
-	Parameter PLAYER_2_OFFSET bound to: 136 - type: integer 
-	Parameter PLAYER_3_OFFSET bound to: 196 - type: integer 
+	Parameter PLAYER_1_OFFSET bound to: 51 - type: integer 
+	Parameter PLAYER_2_OFFSET bound to: 86 - type: integer 
+	Parameter PLAYER_3_OFFSET bound to: 121 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'start_game' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/start_game.v:23]
 	Parameter WaitStart bound to: 3000 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'start_game' (1#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/start_game.v:23]
 INFO: [Synth 8-6157] synthesizing module 'clock_divider' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/clock_divider.v:23]
 	Parameter CLK_I_SPEED bound to: 100000000 - type: integer 
-	Parameter CLK_O_SPEED bound to: 180 - type: integer 
-	Parameter CLK_O_PERIOD bound to: 277777 - type: integer 
+	Parameter CLK_O_SPEED bound to: 240 - type: integer 
+	Parameter CLK_O_PERIOD bound to: 208333 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'clock_divider' (2#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/clock_divider.v:23]
 INFO: [Synth 8-6157] synthesizing module 'clock_divider__parameterized0' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/clock_divider.v:23]
 	Parameter CLK_I_SPEED bound to: 100000000 - type: integer 
-	Parameter CLK_O_SPEED bound to: 2 - type: integer 
-	Parameter CLK_O_PERIOD bound to: 25000000 - type: integer 
+	Parameter CLK_O_SPEED bound to: 360 - type: integer 
+	Parameter CLK_O_PERIOD bound to: 138888 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'clock_divider__parameterized0' (2#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/clock_divider.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clock_divider__parameterized1' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/clock_divider.v:23]
+	Parameter CLK_I_SPEED bound to: 100000000 - type: integer 
+	Parameter CLK_O_SPEED bound to: 3 - type: integer 
+	Parameter CLK_O_PERIOD bound to: 16666666 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider__parameterized1' (2#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/clock_divider.v:23]
 INFO: [Synth 8-6157] synthesizing module 'vga640x480' [X:/ec311/project/vga_testing/vga640x480.v:23]
 	Parameter HS_STA bound to: 16 - type: integer 
 	Parameter HS_END bound to: 112 - type: integer 
@@ -88,15 +95,15 @@ INFO: [Synth 8-6157] synthesizing module 'lfsr__parameterized2' [X:/ec311/projec
 INFO: [Synth 8-6155] done synthesizing module 'lfsr__parameterized2' (5#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/lfsr.v:22]
 INFO: [Synth 8-6155] done synthesizing module 'gen_line__parameterized2' (5#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/gen_line.v:23]
 INFO: [Synth 8-6157] synthesizing module 'draw_line' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_line.v:23]
-	Parameter LineMidpointLoc bound to: 17 - type: integer 
+	Parameter LineMidpointLoc bound to: 14 - type: integer 
 	Parameter LineWidth bound to: 18 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'draw_line' (6#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_line.v:23]
 INFO: [Synth 8-6157] synthesizing module 'draw_line__parameterized0' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_line.v:23]
-	Parameter LineMidpointLoc bound to: 165 - type: integer 
+	Parameter LineMidpointLoc bound to: 163 - type: integer 
 	Parameter LineWidth bound to: 18 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'draw_line__parameterized0' (6#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_line.v:23]
 INFO: [Synth 8-6157] synthesizing module 'draw_line__parameterized1' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_line.v:23]
-	Parameter LineMidpointLoc bound to: 313 - type: integer 
+	Parameter LineMidpointLoc bound to: 312 - type: integer 
 	Parameter LineWidth bound to: 18 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'draw_line__parameterized1' (6#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_line.v:23]
 INFO: [Synth 8-6157] synthesizing module 'draw_line__parameterized2' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_line.v:23]
@@ -104,72 +111,76 @@ INFO: [Synth 8-6157] synthesizing module 'draw_line__parameterized2' [X:/ec311/p
 	Parameter LineWidth bound to: 18 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'draw_line__parameterized2' (6#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_line.v:23]
 INFO: [Synth 8-6157] synthesizing module 'gen_player' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/gen_player.v:23]
-	Parameter PlayerHeight bound to: 60 - type: integer 
-	Parameter PlayerWidth bound to: 40 - type: integer 
+	Parameter PlayerHeight bound to: 40 - type: integer 
+	Parameter PlayerWidth bound to: 25 - type: integer 
 	Parameter PlayerOffset bound to: 16 - type: integer 
 	Parameter LineWidth bound to: 18 - type: integer 
-	Parameter LineLoc0 bound to: 17 - type: integer 
-	Parameter LineLoc1 bound to: 165 - type: integer 
-	Parameter LineLoc2 bound to: 313 - type: integer 
+	Parameter LineLoc0 bound to: 14 - type: integer 
+	Parameter LineLoc1 bound to: 163 - type: integer 
+	Parameter LineLoc2 bound to: 312 - type: integer 
 	Parameter LineLoc3 bound to: 461 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'detect_collision' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/detect_collision.v:23]
-	Parameter PlayerHeight bound to: 60 - type: integer 
-	Parameter PlayerWidth bound to: 40 - type: integer 
+	Parameter PlayerHeight bound to: 40 - type: integer 
+	Parameter PlayerWidth bound to: 25 - type: integer 
 	Parameter PlayerOffset bound to: 16 - type: integer 
 	Parameter LineWidth bound to: 18 - type: integer 
-	Parameter LineLoc0 bound to: 17 - type: integer 
-	Parameter LineLoc1 bound to: 165 - type: integer 
-	Parameter LineLoc2 bound to: 313 - type: integer 
+	Parameter LineLoc0 bound to: 14 - type: integer 
+	Parameter LineLoc1 bound to: 163 - type: integer 
+	Parameter LineLoc2 bound to: 312 - type: integer 
 	Parameter LineLoc3 bound to: 461 - type: integer 
-	Parameter Line1Top bound to: 156 - type: integer 
-	Parameter Line2Top bound to: 304 - type: integer 
+	Parameter Line1Top bound to: 154 - type: integer 
+	Parameter Line2Top bound to: 303 - type: integer 
 	Parameter Line3Top bound to: 452 - type: integer 
-	Parameter Line0Bottom bound to: 26 - type: integer 
-	Parameter Line1Bottom bound to: 174 - type: integer 
-	Parameter Line2Bottom bound to: 322 - type: integer 
+	Parameter Line0Bottom bound to: 23 - type: integer 
+	Parameter Line1Bottom bound to: 172 - type: integer 
+	Parameter Line2Bottom bound to: 321 - type: integer 
 	Parameter X_left bound to: 16 - type: integer 
-	Parameter X_right bound to: 56 - type: integer 
+	Parameter X_right bound to: 41 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'detect_collision' (7#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/detect_collision.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'gen_player' (8#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/gen_player.v:23]
 INFO: [Synth 8-6157] synthesizing module 'gen_player__parameterized0' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/gen_player.v:23]
-	Parameter PlayerHeight bound to: 60 - type: integer 
-	Parameter PlayerWidth bound to: 40 - type: integer 
-	Parameter PlayerOffset bound to: 76 - type: integer 
+	Parameter PlayerHeight bound to: 40 - type: integer 
+	Parameter PlayerWidth bound to: 25 - type: integer 
+	Parameter PlayerOffset bound to: 51 - type: integer 
 	Parameter LineWidth bound to: 18 - type: integer 
-	Parameter LineLoc0 bound to: 17 - type: integer 
-	Parameter LineLoc1 bound to: 165 - type: integer 
-	Parameter LineLoc2 bound to: 313 - type: integer 
+	Parameter LineLoc0 bound to: 14 - type: integer 
+	Parameter LineLoc1 bound to: 163 - type: integer 
+	Parameter LineLoc2 bound to: 312 - type: integer 
 	Parameter LineLoc3 bound to: 461 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'detect_collision__parameterized0' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/detect_collision.v:23]
-	Parameter PlayerHeight bound to: 60 - type: integer 
-	Parameter PlayerWidth bound to: 40 - type: integer 
-	Parameter PlayerOffset bound to: 76 - type: integer 
+	Parameter PlayerHeight bound to: 40 - type: integer 
+	Parameter PlayerWidth bound to: 25 - type: integer 
+	Parameter PlayerOffset bound to: 51 - type: integer 
 	Parameter LineWidth bound to: 18 - type: integer 
-	Parameter LineLoc0 bound to: 17 - type: integer 
-	Parameter LineLoc1 bound to: 165 - type: integer 
-	Parameter LineLoc2 bound to: 313 - type: integer 
+	Parameter LineLoc0 bound to: 14 - type: integer 
+	Parameter LineLoc1 bound to: 163 - type: integer 
+	Parameter LineLoc2 bound to: 312 - type: integer 
 	Parameter LineLoc3 bound to: 461 - type: integer 
-	Parameter Line1Top bound to: 156 - type: integer 
-	Parameter Line2Top bound to: 304 - type: integer 
+	Parameter Line1Top bound to: 154 - type: integer 
+	Parameter Line2Top bound to: 303 - type: integer 
 	Parameter Line3Top bound to: 452 - type: integer 
-	Parameter Line0Bottom bound to: 26 - type: integer 
-	Parameter Line1Bottom bound to: 174 - type: integer 
-	Parameter Line2Bottom bound to: 322 - type: integer 
-	Parameter X_left bound to: 76 - type: integer 
-	Parameter X_right bound to: 116 - type: integer 
+	Parameter Line0Bottom bound to: 23 - type: integer 
+	Parameter Line1Bottom bound to: 172 - type: integer 
+	Parameter Line2Bottom bound to: 321 - type: integer 
+	Parameter X_left bound to: 51 - type: integer 
+	Parameter X_right bound to: 76 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'detect_collision__parameterized0' (8#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/detect_collision.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'gen_player__parameterized0' (8#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/gen_player.v:23]
 INFO: [Synth 8-6157] synthesizing module 'draw_player' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_player.v:23]
-	Parameter PlayerHeight bound to: 60 - type: integer 
-	Parameter PlayerWidth bound to: 40 - type: integer 
+	Parameter PlayerHeight bound to: 40 - type: integer 
+	Parameter PlayerWidth bound to: 25 - type: integer 
 	Parameter PlayerOffset bound to: 16 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'draw_player' (9#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_player.v:23]
 INFO: [Synth 8-6157] synthesizing module 'draw_player__parameterized0' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_player.v:23]
-	Parameter PlayerHeight bound to: 60 - type: integer 
-	Parameter PlayerWidth bound to: 40 - type: integer 
-	Parameter PlayerOffset bound to: 76 - type: integer 
+	Parameter PlayerHeight bound to: 40 - type: integer 
+	Parameter PlayerWidth bound to: 25 - type: integer 
+	Parameter PlayerOffset bound to: 51 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'draw_player__parameterized0' (9#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_player.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'draw_game' (10#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_game.v:23]
+INFO: [Synth 8-6157] synthesizing module 'draw_game_window' [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_game_window.v:23]
+	Parameter WindowHeight bound to: 480 - type: integer 
+	Parameter WindowWidth bound to: 640 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'draw_game_window' (10#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_game_window.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'draw_game' (11#1) [X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_game.v:23]
 WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[639]
 WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[638]
 WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[637]
@@ -272,7 +283,7 @@ WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected 
 WARNING: [Synth 8-3331] design detect_collision__parameterized0 has unconnected port line0_i[540]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 873.988 ; gain = 241.887
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 873.742 ; gain = 242.223
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -285,10 +296,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 873.988 ; gain = 241.887
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 873.742 ; gain = 242.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 873.988 ; gain = 241.887
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 873.742 ; gain = 242.223
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -300,31 +311,30 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/draw_game_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 994.535 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 993.414 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 994.535 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.025 . Memory (MB): peak = 993.414 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 994.535 ; gain = 362.434
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 993.414 ; gain = 361.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 994.535 ; gain = 362.434
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 993.414 ; gain = 361.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 994.535 ; gain = 362.434
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 993.414 ; gain = 361.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 994.535 ; gain = 362.434
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 993.414 ; gain = 361.895
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-223] decloning instance 'clk_div_line' (clock_divider) to 'clk_div_player'
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -336,7 +346,7 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 3     
+	   2 Input     32 Bit       Adders := 4     
 	   2 Input     17 Bit       Adders := 1     
 	   3 Input     11 Bit       Adders := 2     
 	   2 Input     10 Bit       Adders := 5     
@@ -345,15 +355,15 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit         XORs := 4     
 +---Registers : 
 	              640 Bit    Registers := 4     
-	               32 Bit    Registers := 3     
+	               32 Bit    Registers := 4     
 	               16 Bit    Registers := 1     
 	               10 Bit    Registers := 2     
 	                9 Bit    Registers := 2     
 	                3 Bit    Registers := 4     
-	                1 Bit    Registers := 7     
+	                1 Bit    Registers := 8     
 +---Muxes : 
 	   2 Input    640 Bit        Muxes := 4     
-	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 4     
 	   2 Input     10 Bit        Muxes := 5     
 	   2 Input      9 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
@@ -393,6 +403,15 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
 Module clock_divider__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module clock_divider__parameterized1 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
@@ -530,7 +549,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:33 . Memory (MB): peak = 994.535 ; gain = 362.434
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 993.414 ; gain = 361.895
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -542,13 +561,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 994.535 ; gain = 362.434
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 993.414 ; gain = 361.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 1007.395 ; gain = 375.293
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 1001.781 ; gain = 370.262
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -560,7 +579,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:42 . Memory (MB): peak = 1024.410 ; gain = 392.309
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 1020.941 ; gain = 389.422
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -584,7 +603,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 1029.281 ; gain = 397.180
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 1025.570 ; gain = 394.051
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -597,7 +616,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 1029.281 ; gain = 397.180
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 1025.570 ; gain = 394.051
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -609,25 +628,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:45 . Memory (MB): peak = 1029.281 ; gain = 397.180
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 1025.570 ; gain = 394.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:45 . Memory (MB): peak = 1029.281 ; gain = 397.180
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 1025.570 ; gain = 394.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:45 . Memory (MB): peak = 1029.281 ; gain = 397.180
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 1025.570 ; gain = 394.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:45 . Memory (MB): peak = 1029.281 ; gain = 397.180
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 1025.570 ; gain = 394.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -644,17 +663,17 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     2|
-|2     |CARRY4 |    39|
+|2     |CARRY4 |    47|
 |3     |LUT1   |     9|
 |4     |LUT2   |  2596|
-|5     |LUT3   |    93|
-|6     |LUT4   |    43|
-|7     |LUT5   |    90|
-|8     |LUT6   |   758|
-|9     |MUXF7  |   338|
+|5     |LUT3   |   122|
+|6     |LUT4   |    47|
+|7     |LUT5   |    92|
+|8     |LUT6   |   769|
+|9     |MUXF7  |   337|
 |10    |MUXF8  |   168|
-|11    |FDCE   |   133|
-|12    |FDPE   |  2578|
+|11    |FDCE   |   172|
+|12    |FDPE   |  2572|
 |13    |FDRE   |    24|
 |14    |IBUF   |     5|
 |15    |OBUF   |     5|
@@ -662,49 +681,51 @@ Report Cell Usage:
 +------+-------+------+
 
 Report Instance Areas: 
-+------+---------------+---------------------------------+------+
-|      |Instance       |Module                           |Cells |
-+------+---------------+---------------------------------+------+
-|1     |top            |                                 |  6890|
-|2     |  clk_div_lfsr |clock_divider__parameterized0    |    82|
-|3     |  clk_div_line |clock_divider                    |    82|
-|4     |  display      |vga640x480                       |   173|
-|5     |  gen_line_0   |gen_line                         |  1583|
-|6     |    lfsr_o     |lfsr                             |     5|
-|7     |  gen_line_1   |gen_line__parameterized0         |  1580|
-|8     |    lfsr_o     |lfsr__parameterized0             |     4|
-|9     |  gen_line_2   |gen_line__parameterized1         |  1580|
-|10    |    lfsr_o     |lfsr__parameterized1             |     4|
-|11    |  gen_line_3   |gen_line__parameterized2         |  1582|
-|12    |    lfsr_o     |lfsr__parameterized2             |     4|
-|13    |  gen_player_0 |gen_player                       |    39|
-|14    |    collision  |detect_collision                 |    12|
-|15    |  gen_player_1 |gen_player__parameterized0       |    39|
-|16    |    collision  |detect_collision__parameterized0 |    12|
-|17    |  start        |start_game                       |   123|
-+------+---------------+---------------------------------+------+
++------+-----------------+---------------------------------+------+
+|      |Instance         |Module                           |Cells |
++------+-----------------+---------------------------------+------+
+|1     |top              |                                 |  6976|
+|2     |  clk_div_lfsr   |clock_divider__parameterized1    |    82|
+|3     |  clk_div_line   |clock_divider                    |    82|
+|4     |  clk_div_player |clock_divider__parameterized0    |    82|
+|5     |  display        |vga640x480                       |   178|
+|6     |  game_window    |draw_game_window                 |     5|
+|7     |  gen_line_0     |gen_line                         |  1583|
+|8     |    lfsr_o       |lfsr                             |     5|
+|9     |  gen_line_1     |gen_line__parameterized0         |  1580|
+|10    |    lfsr_o       |lfsr__parameterized0             |     4|
+|11    |  gen_line_2     |gen_line__parameterized1         |  1580|
+|12    |    lfsr_o       |lfsr__parameterized1             |     4|
+|13    |  gen_line_3     |gen_line__parameterized2         |  1580|
+|14    |    lfsr_o       |lfsr__parameterized2             |     4|
+|15    |  gen_player_0   |gen_player                       |    37|
+|16    |    collision    |detect_collision                 |    11|
+|17    |  gen_player_1   |gen_player__parameterized0       |    37|
+|18    |    collision    |detect_collision__parameterized0 |    11|
+|19    |  start          |start_game                       |   123|
++------+-----------------+---------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:45 . Memory (MB): peak = 1029.281 ; gain = 397.180
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 1025.570 ; gain = 394.051
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 4751 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:42 . Memory (MB): peak = 1029.281 ; gain = 276.633
-Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:45 . Memory (MB): peak = 1029.281 ; gain = 397.180
+Synthesis finished with 0 errors, 0 critical warnings and 4851 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:38 . Memory (MB): peak = 1025.570 ; gain = 274.379
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 1025.570 ; gain = 394.051
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 545 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 552 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1029.500 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1025.977 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-60 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+63 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:55 . Memory (MB): peak = 1029.500 ; gain = 676.238
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1029.500 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:50 . Memory (MB): peak = 1025.977 ; gain = 672.965
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1025.977 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'X:/ec311/project/vga_testing/vga_testing.runs/synth_1/draw_game.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file draw_game_utilization_synth.rpt -pb draw_game_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Dec  7 02:35:23 2021...
+INFO: [Common 17-206] Exiting Vivado at Tue Dec  7 11:13:53 2021...

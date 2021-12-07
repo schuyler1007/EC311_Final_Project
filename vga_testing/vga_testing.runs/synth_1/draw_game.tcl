@@ -19,7 +19,6 @@ proc create_report { reportName command } {
 }
 set_param chipscope.maxJobs 3
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -34,6 +33,7 @@ set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
   X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/clock_divider.v
   X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/detect_collision.v
+  X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_game_window.v
   X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_line.v
   X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/draw_player.v
   X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/gen_line.v
