@@ -28,7 +28,7 @@ module draw_line
     input [8:0] y_i,
     output region_o    
     );
-   assign region_o = ((line_i[x_i] == 1) &
+   assign region_o = ((line_i[x_i] == 1'b1) &
                       (y_i >= LineMidpointLoc - LineWidth/2) &
                       (y_i < LineMidpointLoc + LineWidth/2)) ? 1 : 0;
 endmodule

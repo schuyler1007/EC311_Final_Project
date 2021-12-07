@@ -22,14 +22,28 @@
 
 module LFSR_tb();
     reg clk_i;
+    reg rst_i;
+    reg en_i;
     wire out_o;
     
-    LFSR lfsr_inst(.clk_i(clk_i), .en_i(1'b1), .nextbit(out_o));
+    lfsr lfsr_inst(
+        .clk_i(clk_i), 
+        .en_i(en_i),
+        .rst_i(rst_i),
+        .rand_o(out_o)
+    );
     initial begin
         clk_i = 1'b0;
+        rst_i = 1'b0;
+        en_i = 1'b1;
+        # 10 rst_i = 1'b1;
     end
     
-    always@(*) begin
+//    always begin
+//        #100 en_i = ~en_i;
+//    end
+    
+    always begin
         #10 clk_i <= ~clk_i;
     end
 

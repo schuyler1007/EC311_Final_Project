@@ -1,4 +1,4 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/line_generate.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module line_generate
-INFO: [VRFC 10-2263] Analyzing Verilog file "X:/ec311/project/vga_testing/vga_testing.srcs/sim_1/new/line_generate_test.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module line_generate_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "X:/ec311/project/vga_testing/vga_testing.srcs/sources_1/new/start_game.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module start_game
+INFO: [VRFC 10-2263] Analyzing Verilog file "X:/ec311/project/vga_testing/vga_testing.srcs/sim_1/new/start_game_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module start_game_test

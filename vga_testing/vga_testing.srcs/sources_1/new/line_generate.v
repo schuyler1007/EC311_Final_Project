@@ -20,34 +20,22 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module line_generate(reset_i, clk_i, en_i, line_o);
-    input reset_i, clk_i, en_i;
-    output [639:0] line_o;
-    wire rand_num;
-    reg [639:0] cs = {640{1'b1}}, ns = {640{1'b1}};
-    reg [6:0] count = 0;
-    reg new_bit = 1;
+module line_generate #(parameter seed = 0) (reset_i, clk_i, clk_lfsr, en_i, line_o, rand_num);
+    input clk_i, reset_i, en_i, clk_lfsr;
+    output reg [639:0] line_o;
+    output wire rand_num;
     
-    LFSR rn(.clk_i(clk_i), .en_i(en_i), .nextbit(rand_num));
-
+    LFSR #(.seed(seed)) rn(.clk_i(clk_lfsr), .en_i(en_i), .nextbit(rand_num));
+    
     always@(posedge clk_i or negedge reset_i) begin
         if (reset_i == 0) begin
-            cs <= {640{1'b1}};
-            ns <= {640{1'b1}};
-            new_bit <= 0;
+            line_o <= {640{1'b1}};
         end else begin
-            cs <= ns;
-            count = count + 1;
+            if (line_o == {640{1'b0}})
+                line_o <= {640{1'b1}};
+            else begin
+                line_o <= {rand_num, line_o[639:1]};
+            end
         end
-    end // always
-
-    always@(*) begin
-        if (count == 80) begin
-            new_bit = rand_num;
-            count = 0;
-        end 
-        ns = {new_bit, cs[639:1]};
-    end // always
-    
-    assign line_o = cs;
+    end
 endmodule

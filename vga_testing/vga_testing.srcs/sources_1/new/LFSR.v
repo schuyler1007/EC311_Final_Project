@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 12/02/2021 06:56:46 PM
+// Create Date: 12/05/2021 04:57:39 PM
 // Design Name: 
-// Module Name: LFSR
+// Module Name: lfsr
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -19,24 +19,25 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
-module LFSR (clk_i, en_i, nextbit);
-    input clk_i, en_i;
-    output reg nextbit;
+module lfsr 
+    # (parameter Seed = 0) (
+    input clk_i,
+    input rst_i,
+    input en_i,
+    output reg rand_o
+    );
     
-    reg [7:0] next_LFSR = 8'b0;
-//    reg nextbit;
-
-    always@(posedge clk_i) begin
-        if (en_i == 1'b1) begin
-           next_LFSR <= {next_LFSR[6:0], nextbit}; 
+    reg [2:0] next_lfsr;
+    
+    always @(posedge clk_i or negedge rst_i) begin
+        if (rst_i == 1'b0) begin
+            next_lfsr <= Seed;
+        end else if (en_i == 1'b1) begin
+            next_lfsr <= {next_lfsr[1:0], rand_o};
         end
-    end // always
-
+    end
+    
     always@(*) begin
-        nextbit = next_LFSR[7] ^~ next_LFSR[5] ^~ next_LFSR[4] ^~ next_LFSR[3];
-    end // always
-
-//    assign random_num = next_LFSR[7:0];
-
+        rand_o = next_lfsr[2] ^~ next_lfsr[1];
+    end
 endmodule
