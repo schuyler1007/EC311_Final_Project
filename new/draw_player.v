@@ -27,11 +27,13 @@ module draw_player
     input [8:0] luc_loc_i, // just y-coordinate
     input [9:0] x_i,
     input [8:0] y_i,
+    input       player_en_i,
     output region_o
     );
+    
     
     assign region_o = ((x_i >= PlayerOffset) &
                        (x_i < PlayerOffset + PlayerWidth) &
                        (y_i >= luc_loc_i) &
-                       (y_i < luc_loc_i + PlayerHeight)) ? 1 : 0;
+                       (y_i < luc_loc_i + PlayerHeight)) ? player_en_i : 0;
 endmodule
