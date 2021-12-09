@@ -110,7 +110,7 @@ module draw_game(
         .o_y(display_y)
     );
     
-    gen_line #(.Seed(0)) gen_line_0(
+    gen_line #(.Seed(184), .prob(90)) gen_line_0(
          .clk_line(clk_line),
          .clk_lfsr(clk_lfsr),
          .rst_i(rst_i),
@@ -118,7 +118,7 @@ module draw_game(
          .line_type_i(lines_type_int)
     );
     
-    gen_line #(.Seed(1)) gen_line_1(
+    gen_line #(.Seed(64), .prob(150)) gen_line_1(
          .clk_line(clk_line),
          .clk_lfsr(clk_lfsr),
          .rst_i(rst_i),
@@ -126,7 +126,7 @@ module draw_game(
          .line_type_i(lines_type_int)
     );
     
-    gen_line #(.Seed(2)) gen_line_2(
+    gen_line #(.Seed(60), .prob(140)) gen_line_2(
          .clk_line(clk_line),
          .clk_lfsr(clk_lfsr),
          .rst_i(rst_i),
@@ -134,7 +134,7 @@ module draw_game(
          .line_type_i(lines_type_int)
     );
     
-    gen_line  #(.Seed(3)) gen_line_3(
+    gen_line  #(.Seed(254), .prob(95)) gen_line_3(
          .clk_line(clk_line),
          .clk_lfsr(clk_lfsr),
          .rst_i(rst_i),
