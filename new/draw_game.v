@@ -211,6 +211,44 @@ module draw_game(
          .player_en_i(PLAYER_EN[1]),
          .luc_loc_o(player1_int)
      );
+     
+     gen_player #(.PlayerHeight(PLAYER_HEIGHT),
+                 .PlayerWidth(PLAYER_WIDTH),
+                 .PlayerOffset(PLAYER_2_OFFSET),
+                 .LineWidth(LINE_WIDTH),
+                 .LineLoc0(LINE_0_LOC),
+                 .LineLoc1(LINE_1_LOC),
+                 .LineLoc2(LINE_2_LOC),
+                 .LineLoc3(LINE_3_LOC)) gen_player_2(
+         .rst_i(rst_i),
+         .clk_i(clk_player),
+         .line0_i(line0_int),
+         .line1_i(line1_int),
+         .line2_i(line2_int),
+         .line3_i(line3_int),
+         .grv_i(GRV_BTN[2]),
+         .player_en_i(PLAYER_EN[2]),
+         .luc_loc_o(player2_int)
+     );
+     
+     gen_player #(.PlayerHeight(PLAYER_HEIGHT),
+                 .PlayerWidth(PLAYER_WIDTH),
+                 .PlayerOffset(PLAYER_3_OFFSET),
+                 .LineWidth(LINE_WIDTH),
+                 .LineLoc0(LINE_0_LOC),
+                 .LineLoc1(LINE_1_LOC),
+                 .LineLoc2(LINE_2_LOC),
+                 .LineLoc3(LINE_3_LOC)) gen_player_3(
+         .rst_i(rst_i),
+         .clk_i(clk_player),
+         .line0_i(line0_int),
+         .line1_i(line1_int),
+         .line2_i(line2_int),
+         .line3_i(line3_int),
+         .grv_i(GRV_BTN[3]),
+         .player_en_i(PLAYER_EN[3]),
+         .luc_loc_o(player3_int)
+     );
     
     draw_player #(.PlayerHeight(PLAYER_HEIGHT),
                   .PlayerWidth(PLAYER_WIDTH),
@@ -218,6 +256,7 @@ module draw_game(
       .luc_loc_i(player0_int),
       .x_i(display_x),
       .y_i(display_y),
+      .player_en_i(PLAYER_EN[0]),
       .region_o(player0_region)
     );
     
@@ -227,7 +266,28 @@ module draw_game(
       .luc_loc_i(player1_int),
       .x_i(display_x),
       .y_i(display_y),
+      .player_en_i(PLAYER_EN[1]),
       .region_o(player1_region)
+    );
+    
+    draw_player #(.PlayerHeight(PLAYER_HEIGHT),
+                  .PlayerWidth(PLAYER_WIDTH),
+                  .PlayerOffset(PLAYER_2_OFFSET)) draw_player_2(
+      .luc_loc_i(player2_int),
+      .x_i(display_x),
+      .y_i(display_y),
+      .player_en_i(PLAYER_EN[2]),
+      .region_o(player2_region)
+    );
+    
+    draw_player #(.PlayerHeight(PLAYER_HEIGHT),
+                  .PlayerWidth(PLAYER_WIDTH),
+                  .PlayerOffset(PLAYER_3_OFFSET)) draw_player_3(
+      .luc_loc_i(player3_int),
+      .x_i(display_x),
+      .y_i(display_y),
+      .player_en_i(PLAYER_EN[3]),
+      .region_o(player3_region)
     );
     
     draw_game_window #(.WindowHeight(WINDOW_HEIGHT),
@@ -238,7 +298,7 @@ module draw_game(
     );
 
     assign all_lines_region = line0_region | line1_region | line2_region | line3_region;
-    assign VGA_R[3] = window_region & (all_lines_region | player0_region);
-    assign VGA_G[3] = window_region & (all_lines_region);
-    assign VGA_B[3] = window_region & (all_lines_region | player1_region);
+    assign VGA_R[3] = window_region & (all_lines_region | player0_region | player3_region);
+    assign VGA_G[3] = window_region & (all_lines_region | player1_region);
+    assign VGA_B[3] = window_region & (all_lines_region | player2_region | player3_region);
 endmodule

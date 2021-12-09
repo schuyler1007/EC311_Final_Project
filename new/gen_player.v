@@ -64,15 +64,17 @@ module gen_player
             luc_loc_o = LineLoc2 + PlayerHeight;
             grv_player = 1'b1; // down
         end else begin 
-            if (collision_int == 1'b0) begin
-                if (grv_player == 1'b0) begin
-                    luc_loc_o = luc_loc_o - 1'b1;
-                end if (grv_player == 1'b1) begin
-                    luc_loc_o = luc_loc_o + 1'b1;
-                end
-            end if (collision_int == 1'b1 && grv_i == 1'b1) begin
+            if (luc_loc_o<480) begin
+                if (collision_int == 1'b0) begin
+                    if (grv_player == 1'b0) begin
+                        luc_loc_o = luc_loc_o - 1'b1;
+                    end if (grv_player == 1'b1) begin
+                        luc_loc_o = luc_loc_o + 1'b1;
+                    end
+                end if (collision_int == 1'b1 && grv_i == 1'b1) begin
                 grv_player = ~grv_player;
-            end
+                end
+             end
 
 //            end if (luc_loc_o <= LineLoc0 + 9) begin
 //                luc_loc_o = LineLoc0 + 9;
