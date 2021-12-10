@@ -21,7 +21,7 @@
 
 
 module gen_line
-    # (parameter GapWidth = 80, parameter Seed = 0) (
+    # (parameter GapWidth = 80, parameter Seed = 0, parameter prob = 64) (
     input clk_line,
     input clk_lfsr,
     input rst_i,
@@ -31,7 +31,7 @@ module gen_line
     
     wire rand_pix;
     
-    lfsr #(.Seed(Seed)) lfsr_o(
+    lfsr #(.Seed(Seed), .prob(prob)) lfsr_o(
         .rst_i(rst_i),
         .clk_i(clk_lfsr),
         .en_i(1'b1),
