@@ -30,6 +30,7 @@ module gen_player
       parameter LineLoc2 = 319,
       parameter LineLoc3 = 461) (
     input rst_i,
+    input restart_game,
     input clk_i,
     input player_en_i,
     input grv_i,
@@ -60,8 +61,8 @@ module gen_player
         );
     
     always @(posedge clk_i or negedge rst_i) begin
-        if (rst_i == 1'b0) begin
-            luc_loc_o = LineLoc2 + PlayerHeight;
+        if (rst_i == 1'b0 || restart_game == 1'b1) begin
+            luc_loc_o = LineLoc2 - (LineWidth / 2) - PlayerHeight;
             grv_player = 1'b1; // down
         end else begin 
             if (luc_loc_o<480) begin
@@ -74,22 +75,7 @@ module gen_player
                 end if (collision_int == 1'b1 && grv_i == 1'b1) begin
                 grv_player = ~grv_player;
                 end
-             end
-
-//            end if (luc_loc_o <= LineLoc0 + 9) begin
-//                luc_loc_o = LineLoc0 + 9;
-//            end if (luc_loc_o >= LineLoc3 - 9 - PlayerHeight) begin
-//                luc_loc_o = LineLoc3 - 9 - PlayerHeight;
-//            end
-
-            // if gravity is up
-                // check if either top points touch the bottom of any line
-                // and the line is there at either top point
-                // stop subtracting 1'b1
-            // if gravity is down
-                // check if either bottom points touch the top of any line
-                // and the line is there at either bottom point
-                // stop adding 1'b1 
+            end
         end
     end   
 endmodule

@@ -35,6 +35,7 @@ module draw_game(
     
     wire clk_line, clk_lfsr, clk_player;
     wire rst_display = ~rst_i; // flip vga reset for display (active low on artix board)
+//    wire restart_game;
     wire lines_type_int;
     wire [639:0] line0_int, line1_int, line2_int, line3_int;
     wire line0_region, line1_region, line2_region, line3_region;
@@ -43,6 +44,7 @@ module draw_game(
     
     wire player0_region, player1_region, player2_region, player3_region;
     wire [8:0] player0_int, player1_int, player2_int, player3_int;
+    wire [3:0] active_players;
     
     wire [9:0] display_x; // current pixel x position: 10-bit value: 0-1023
     wire [8:0] display_y; // current pixel y position:  9-bit value: 0-511
@@ -73,8 +75,11 @@ module draw_game(
     start_game #(.WaitStart(3000)) start(
         .rst_i(rst_i),
         .clk_i(clk_i),
+        .player_en(PLAYER_EN),
         .new_game_i(NEW_GAME_BTN),
-        .line_type_o(lines_type_int)
+        .line_type_o(lines_type_int),
+        .active_players(active_players)
+//        .restart_game(restart_game)
     );
     
     clock_divider #(.CLK_O_SPEED(LINE_SPEED)) clk_div_line(
@@ -183,13 +188,14 @@ module draw_game(
                  .LineLoc2(LINE_2_LOC),
                  .LineLoc3(LINE_3_LOC)) gen_player_0(
          .rst_i(rst_i),
+         .restart_game(NEW_GAME_BTN),
          .clk_i(clk_player),
          .line0_i(line0_int),
          .line1_i(line1_int),
          .line2_i(line2_int),
          .line3_i(line3_int),
          .grv_i(GRV_BTN[0]),
-         .player_en_i(PLAYER_EN[0]),
+         .player_en_i(active_players[0]),
          .luc_loc_o(player0_int)
      );
      
@@ -202,13 +208,14 @@ module draw_game(
                  .LineLoc2(LINE_2_LOC),
                  .LineLoc3(LINE_3_LOC)) gen_player_1(
          .rst_i(rst_i),
+         .restart_game(NEW_GAME_BTN),
          .clk_i(clk_player),
          .line0_i(line0_int),
          .line1_i(line1_int),
          .line2_i(line2_int),
          .line3_i(line3_int),
          .grv_i(GRV_BTN[1]),
-         .player_en_i(PLAYER_EN[1]),
+         .player_en_i(active_players[1]),
          .luc_loc_o(player1_int)
      );
      
@@ -221,13 +228,14 @@ module draw_game(
                  .LineLoc2(LINE_2_LOC),
                  .LineLoc3(LINE_3_LOC)) gen_player_2(
          .rst_i(rst_i),
+         .restart_game(NEW_GAME_BTN),
          .clk_i(clk_player),
          .line0_i(line0_int),
          .line1_i(line1_int),
          .line2_i(line2_int),
          .line3_i(line3_int),
          .grv_i(GRV_BTN[2]),
-         .player_en_i(PLAYER_EN[2]),
+         .player_en_i(active_players[2]),
          .luc_loc_o(player2_int)
      );
      
@@ -240,13 +248,14 @@ module draw_game(
                  .LineLoc2(LINE_2_LOC),
                  .LineLoc3(LINE_3_LOC)) gen_player_3(
          .rst_i(rst_i),
+         .restart_game(NEW_GAME_BTN),
          .clk_i(clk_player),
          .line0_i(line0_int),
          .line1_i(line1_int),
          .line2_i(line2_int),
          .line3_i(line3_int),
          .grv_i(GRV_BTN[3]),
-         .player_en_i(PLAYER_EN[3]),
+         .player_en_i(active_players[3]),
          .luc_loc_o(player3_int)
      );
     
@@ -256,7 +265,7 @@ module draw_game(
       .luc_loc_i(player0_int),
       .x_i(display_x),
       .y_i(display_y),
-      .player_en_i(PLAYER_EN[0]),
+      .player_en_i(active_players[0]),
       .region_o(player0_region)
     );
     
@@ -266,7 +275,7 @@ module draw_game(
       .luc_loc_i(player1_int),
       .x_i(display_x),
       .y_i(display_y),
-      .player_en_i(PLAYER_EN[1]),
+      .player_en_i(active_players[1]),
       .region_o(player1_region)
     );
     
@@ -276,7 +285,7 @@ module draw_game(
       .luc_loc_i(player2_int),
       .x_i(display_x),
       .y_i(display_y),
-      .player_en_i(PLAYER_EN[2]),
+      .player_en_i(active_players[2]),
       .region_o(player2_region)
     );
     
@@ -286,7 +295,7 @@ module draw_game(
       .luc_loc_i(player3_int),
       .x_i(display_x),
       .y_i(display_y),
-      .player_en_i(PLAYER_EN[3]),
+      .player_en_i(active_players[3]),
       .region_o(player3_region)
     );
     
